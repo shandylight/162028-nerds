@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+  <body>
+  	<!-- определяю место для шапки проекта -->
+  		<header class="main-header"> <!-- часть проекта с серым фоном -->
+  			<div class="container-navigation">  <!-- Долго думала, над проблемой хедера и футера - решила, что большое широкое поле для футера и хэдера ("main-header"), это один класс. Узкое поле которое находится по середине, это будет контейнер, где я загоню, все детальки... просто выравнивать peddingом, я плохо соображаю, а учитывая, что я в сетках и позиционировании вообще туплю, то пусть пока будет так -->
+          		<img src="img/index-logo.png" width="139" height="56" alt="Логотип Нердс">
+       		
+       			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
+           		  <ul>
+           		 	<li>
+              			<a href="#">Студия</a>
+            		</li>
+             		<li>
+             			 <a href="#">Клиенты</a>
+            		</li>
+           			<li>
+              			 <a href="#">Магазин</a>
+            		</li>
+           			<li>
+             			 <a href="#">Контакты</a>
+            		</li>
+            		<li>
+             			 <a href="#">Корзина</a> 
+           			</li>
+          		  </ul>
+        		</nav>
+        	</div>
+  		 	<div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН
+  		 		<br>
+			ГОТОВЫХ МАКЕТОВ
+    		</div>  <!-- Вставила этот блок в хєдер, так как он тоже относится к серому участку -->
+    	</header>
+
+    	<div class="main-centre"> <!-- центральный блок на белом фоне, который включает в себя две основные колонки sidebar и portfolio-->
+        <div class="sidebar-choice">
+          <span> Стоимость </span> 
+          <div> </div> <!-- Бегунок, я пропускаю, так как сделав курс по формам, информации о нем не нашла -->
+          <div class="price">
+            <span> Сетка:</span>
+            <label for="minimum-price"> от </label>  <!-- Ира, скажите, а можно же выносить тег input за тег label, вот так как сейчас?  -->
+              <input type="text" id="minimum-price" value="0">
+            <label for="maximum-price"> до </label>   
+              <input type="text" id="maximum-price" value="15000">
+          </div>
+          <div class="radio-button">
+            <label for="radio-adaptive"> 
+               <input type="radio" name="adaptive" id="radio-adaptive" checked>
+               Адаптивная
+            </label> <br>
+            <label for="radio-fix">  
+               <input type="radio" name="fix" id="radio-fix">
+               Фиксированная
+            </label> <br>
+            <label for="radio-rubber"> 
+               <input type="radio" name="rubber" id="radio-rubber">
+               Резиновая
+            </label>
+
+          </div>
+          <div class="box">
+            <span> Особенности: </span>
+            <br>
+            <label for="slider-box"> 
+              <input type="checkbox" id="slider-box" checked>
+              Слайдер 
+            </label> 
+            <br>
+            <label for="profit-box"> 
+              <input type="checkbox" id="profit-box">
+              Блок преимуществ
+            </label>
+            <br>
+            <label for="news-box"> 
+              <input type="checkbox" id="news-box" checked>
+              Новости
+            </label>
+            <br>
+            <label for="gallery-box"> 
+              <input type="checkbox" id="gallery-box">
+              Галерея
+            </label>
+            <br>
+            <label for="bin-box"> 
+              <input type="checkbox" id="bin-box">
+              Корзина
+            </label> 
+            <br>
+            <label for="button-box">  <!-- Ирина, подскажите, пожалуйста, я не совсем поняла, в проекте это какая кнопка? которая обычная или input -->
+              <input type="submit" id="button-box" value="Показать">
+            </label>
+             
+          </div>
+        </div>
+        <div class="portfolio">
+          <div class="nav-portfolio">
+            <span class="title-portfolio"> Сортировать:
+              
+            </span>
+            <ul class="list-nav"> <!-- Ирина, скажите, а что значит - надо добавлять List при списках? почему и куда? -->
+              <li>
+                По цене
+              </li>
+               <li>
+                По типу
+              </li>
+               <li>
+                По функционалу
+              </li>
+              
+            </ul> <!-- Дальше идут хитрые стрелочки -->
+            
+          </div>
+          <div class="wrapper-images">
+            <ul class="list-images">
+              <li>
+                <a href="#">
+                  <img src="img/site-aviator.png" alt="Сайт Авиатор">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/site-sindy.png" alt="Сайт Песок">
+                </a>
+                <div class="about-site">
+                  <div class="about-name"> Sunset
+                  </div>
+                  <div class="about-discribe">
+                    Интернет-магазин с личным кабинетом
+                  
+                  <a class="button-about" href="#"> 10000 P. </div>
+                  
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/site-forte.png" alt="Сайт Форте">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/site-organic.png" alt="Сайт Органик">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/site-avenue.png" alt="Сайт Аvenue">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/site-dovetail.png" width="239" height="240" alt="Сайт Dovetail">
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+
+          
+        </div>
+    		
+    	</div>

@@ -2,36 +2,43 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
   	<!-- определяю место для шапки проекта -->
   	<header class="main-header"> <!-- часть проекта с серым фоном -->
-  		<div class="container-navigation">  
-          <img src="img/index-logo.png" width="139" height="56" alt="Логотип Нердс">
-       	</div>
-        <nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
-           <ul>
-            <li>
-              <a href="#">Студия</a>
-            </li>
-             <li>
-              <a href="#">Клиенты</a>
-            </li>
-            <li>
-              <a href="#">Магазин</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-            <li>
-              <a href="#">Корзина</a> <!--ВОПРОС №1. рядом должен быть символ корзины = не знаю как это оформляется, я думала, что это картинка, поэтому не знаю как этот символ оформляется -->
-            </li>
-          </ul>
-        </nav>
-  		</div>
+  		  <div class="container-navigation">   <!-- Долго думала, над проблемой хедера и футера - решила, что большое широкое поле для футера и хэдера ("main-header"), это один класс. Узкое поле которое находится по середине, это будет контейнер, где я загоню, все детальки... просто выравнивать peddingом, я плохо соображаю, а учитывая, что я в сетках и позиционировании вообще туплю, то пусть пока будет так  -->
+            <img src="img/index-logo.png" width="139" height="56" alt="Логотип Нердс">
+       	    <nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
+              <ul>
+                <li>
+                 <a href="#">Студия</a>
+                </li>
+                <li>
+                 <a href="#">Клиенты</a>
+                </li>
+                <li>
+                  <a href="#">Магазин</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+                
+              </ul>
+              <div class="place-simbol">
+                <a class="simbol-bin" href="#">
+                  <i class="icon-basket"></i> <!-- я посмтрела видео по иконочным шрифтам, поняла только вот это, что нужно сделать...но вместо символа, она кидает  букву b? я могла в CSS не правильно установить путь к файлу, но я не знаю как выставлять пути -->
+                  <span class="decorate-bin"> Корзина </span>
+                             
+                </a>
+                
+              </div> <!-- отдельный блок для Корзины -->
+            </nav>
+        </div>
+  	</header>
 
-  		<div class="container-advertisement"> <!--  контейнер для рекламы на сером фоне - слайдер -->
+  	<div class="container-advertisement"> <!--  контейнер для рекламы на сером фоне - слайдер -->
         <div class="radio-button"> <!-- создаем радио кнопки для слайдера -->
           <label for="button1"> 
             <input type="radio" id="button1" name="target" checked>
@@ -44,46 +51,46 @@
            </label>
         </div>
 
-        <div class="slides">   <!-- прописываю каждый слайд по отдельности -->
+        <div class="slides">   <!-- прописываю каждый слайд по отдельности --> <!-- Я подумала, что верно, по сути стили у наполнителя слайдера одинаковые будут, только картинки разные (только пока еще не понимаю, как встанут картинки с разными размерами) -->
           
           <div class="slide active">   <!-- Слайд 1 -->
-            <div class="slogan-item1">
-              <b class="slogan-big1">Долго, дорого,  скрупулезно.</b>
+            <div class="slogan-item">
+              <b class="slogan-big">Долго, дорого,  скрупулезно.</b>
               <p>Математически выверенный дизайн  для вашего сайта или мобильного</p>
-              <a class="btn-slide1" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              <a class="btn-slide" href="#">УЗНАТЬ БОЛЬШЕ</a>
             </div>
 
-            <div class="image-item1">
+            <div class="image-item">
                <img src="img/slide1.png" width="338" height="231" alt="Картинки слайдера">
             </div>
           </div> 
           
           <div class="slide"> <!-- Слайд 2 -->
-            <div class="slogan-item2">
-              <b class="slogan-big2">Любите ли вы математику, как любим ее мы?</b>
+            <div class="slogan-item">
+              <b class="slogan-big">Любите ли вы математику, как любим ее мы?</b>
               <p>Нашим дизайнерам мы удаляем нейроны, ответственные
                   за креатив, чтобы дать им возможность все просчитать </p>
-              <a class="btn-slide2" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              <a class="btn-slide" href="#">УЗНАТЬ БОЛЬШЕ</a>
             </div>
-            <div class="image-item2">
+            <div class="image-item">
                <img src="img/slide2.png" width="230" height="249" alt="Картинки слайдера">
             </div>
           </div>
           
           <div class="slide"> <!-- Слайд 3 -->
-            <div class="slogan-item3">
-              <b class="slogan-big3">Только наркотики, только хардкор!</b>
+            <div class="slogan-item">
+              <b class="slogan-big">Только наркотики, только хардкор!</b>
               <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
-              <a class="btn-slide3" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              <a class="btn-slide" href="#">УЗНАТЬ БОЛЬШЕ</a>
             </div>
-            <div class="image-item3">
+            <div class="image-item">
                <img src="img/slide3.png" width="333" height="319" alt="Картинки слайдера">
             </div>
           </div>
 
-        </div> 
+    </div> 
         
-        <div class="main-centre"> <!-- центральный блок на белом фоне -->
+    <div class="main-centre"> <!-- центральный блок на белом фоне -->
           <ul class="block-columns"> <!-- блок для колонок -->
             <li>
               <div class="site">
@@ -161,23 +168,24 @@
               </li>
             </ul>
           </div>
-       </div>
-       <div class="map"> <!-- блок карта -->
+    </div>
+
+
+    <div class="map"> <!-- блок карта -->
         <div class="wrapper-map">  <!-- обои для карты и всего, что на ней находится -->
           <div> <!-- место для яндекс карты -->
               <img src="" width="1080" height="450" alt="Яндекс карта">
           </div> 
           <div class="wrapper-contact"> <!-- блок для расположения контакта на карте -->
             <div class="title-contact"><!-- название студии на зоголовке -->
-              <h1>
+              <span>
                 <b>Nerds</b>
                 DESIGN STUDIO
-              </h1>
+              </span>
             </div> 
             <div class="address-contact">
               <p> 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                 <br>
-
                   тел. +7 (812) 275-75-75
              </p>
             <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
@@ -193,9 +201,10 @@
 
         </div>
          
-       </div>
-       <footer class="main-footer"> 
-        <div class="footer">
+    </div>
+       
+    <footer class="main-footer"> Ответ на вопрос "зачем нужен нижний класс"- Ирина, если убрать нижний класс, то иконки с текстом выравнивать padding-ом?
+        <div class="footer"> 
           <div class="socialsite-buttons"> <!-- ПОТОМ ПЕРЕДЕЛАЮ С СИМВОЛАМИ -->
             <ul>
               <li>
@@ -224,20 +233,16 @@
               Скидка 10% для друзей из социальных сетей.
             </p>
           </div>
-
-          
         </div>
 
-       </footer>
+    </footer>
 
          
        </div>
             
       </div>
 
-  	</header>
-
-
+  	
   </body>
 </html>
 
