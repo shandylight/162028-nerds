@@ -58,26 +58,11 @@ body {
 	/*height: 430px;*/
 
 }
-.container-logo-nav {
+.container {
 	width: 1200px;	
 	margin: 0 auto;
 
 }
-
-
-
-.container-main{
-	width: 1200px;	
-	margin: 0 auto;
-
-}
-
-.container-map{
-	width: 1200px;	
-	margin: 0 auto;
-
-}
-
 
   /*Вопрос 3 У меня от начала лого до начала слова Студия ширина 400, ширина лого - 140
   отступ списка со словами 180, итого 400 -320 =80... если сюда посчитать padding-left: 40px;
