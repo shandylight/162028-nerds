@@ -109,3 +109,17 @@ img {
 	padding-left: 40px;
 
 }
+.bbb:before {        /*попытка прицепить стили к псевдоэлементу провалилась*/
+    content: "\62";  
+    font-size: 24pt;  
+    text-align: center;  
+    line-height: 42px;  
+    color: #fff;  
+    background: #ddd;  
+    float: left;  
+    position: relative;  
+    top: 30px;  
+  
+}  
+
+
