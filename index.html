@@ -6,10 +6,13 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
+
   	<!-- определяю место для шапки проекта -->
   	<header class="main-header"> <!-- часть проекта с серым фоном -->
-  		  <div class="container-navigation">   <!-- Долго думала, над проблемой хедера и футера - решила, что большое широкое поле для футера и хэдера ("main-header"), это один класс. Узкое поле которое находится по середине, это будет контейнер, где я загоню, все детальки... просто выравнивать peddingом, я плохо соображаю, а учитывая, что я в сетках и позиционировании вообще туплю, то пусть пока будет так  -->
-            <img src="img/index-logo.png" width="139" height="56" alt="Логотип Нердс">
+  		  <div class="container-logo-nav">   
+            <div class="logo-img">
+            <img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
+            </div>
        	    <nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
               <ul>
                 <li>
@@ -28,11 +31,11 @@
               </ul>
               <div class="place-simbol">
                 <a class="simbol-bin" href="#">
-                  <i class="icon-basket"></i> <!-- я посмотрела видео по иконочным шрифтам, поняла только вот это, что нужно сделать...но вместо символа, она кидает  букву b? я могла в CSS не правильно установить путь к файлу, но я не знаю как выставлять пути -->
-                  <p class="decorate-bin"> <!-- сейчас переделала на вот так, это идея после прочтения статьи по псевдо элементам -->   <!-- !!!!!!!!!!!Ничего не поняла, так как после этих действий применились свойства к корзине, а вот с псевдоэлементами ничего не получилось!!!!!!!!!!!!!!!!! -->
-                    <span class="bbb">:before </span>
+                 <!--  <i class="icon-basket">  </i>  -->
+                  <p class="decorate-bin"> 
+                    <span class="basket-simbol"> </span>
                     Корзина  
-                    <span>:after</span>   
+                      
                   </p>  
                 </a>
                 
@@ -41,7 +44,13 @@
         </div>
   	</header>
 
-  	<div class="container-advertisement"> <!--  контейнер для рекламы на сером фоне - слайдер -->
+
+
+<main>
+  	<div class="promo"> 
+      <div class="container-promo"> <!-- хитрый контейнер для центрирования -->
+
+
         <div class="radio-button"> <!-- создаем радио кнопки для слайдера -->
           <label for="button1"> 
             <input type="radio" id="button1" name="target" checked>
@@ -53,6 +62,7 @@
             <input type="radio" id="button3" name="target"> 
            </label>
         </div>
+
 
         <div class="slides">   <!-- прописываю каждый слайд по отдельности --> <!-- Я подумала, что верно, по сути стили у наполнителя слайдера одинаковые будут, только картинки разные (только пока еще не понимаю, как встанут картинки с разными размерами) -->
           
@@ -91,9 +101,14 @@
             </div>
           </div>
 
-    </div> 
-        
+         </div> 
+    </div>
+    </div>
+
+
+
     <div class="main-centre"> <!-- центральный блок на белом фоне -->
+      <div class="container-main">
           <ul class="block-columns"> <!-- блок для колонок -->
             <li>
               <div class="site">
@@ -171,10 +186,13 @@
               </li>
             </ul>
           </div>
+   
+   </div>
     </div>
 
 
-    <div class="map"> <!-- блок карта -->
+    <div class="map">
+    <div class="container-map"> <!-- блок карта -->
         <div class="wrapper-map">  <!-- обои для карты и всего, что на ней находится -->
           <div> <!-- место для яндекс карты -->
               <img src="" width="1080" height="450" alt="Яндекс карта">
@@ -203,8 +221,11 @@
           </div>
 
         </div>
-         
+   
+   </div>      
     </div>
+ </main>
+
        
     <footer class="main-footer"> Ответ на вопрос "зачем нужен нижний класс"- Ирина, если убрать нижний класс, то иконки с текстом выравнивать padding-ом?
         <div class="footer"> 

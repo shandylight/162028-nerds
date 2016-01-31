@@ -45,51 +45,60 @@
 
 
 body {
-	background-color: white; 
-	 /*в фотошопе нет ширины для блока на котором висит весь контент,
-	так как у меня ширина монитора 1920, то я ее беру за основу, 
-	а потом все вешаю на размер, который указан в фотошопе- 1200*/
-	width: 1920px;
+	margin: 0;
+	padding:0;
 	font-family: "Roboto", Verdana;
 
 }
 
-/*ВОПРОС 1- почему между main-header и body - тонкая полоска, когда хотелось бы что бы
-main-header прикреплялся с 0*/
-
 .main-header {
-	width: 1200px;
+	width: 100%;
 	margin: 0 auto;
-	background-color: #efefef;
-	height: 430px;
+	background-color: #3f3f3f;
+	/*height: 430px;*/
 
 }
-.container-navigation {
+.container-logo-nav {
 	width: 1200px;	
-	height: 90px;
+	margin: 0 auto;
 
 }
 
-img {
-	width: 139px;
-	height: 56px;
+
+
+.container-main{
+	width: 1200px;	
+	margin: 0 auto;
+
 }
 
- /*Вопрос 2 Почему .main-navigation  занимает в высоту только 46
-  и не прикрепился к верху????*/
+.container-map{
+	width: 1200px;	
+	margin: 0 auto;
+
+}
+
+
   /*Вопрос 3 У меня от начала лого до начала слова Студия ширина 400, ширина лого - 140
   отступ списка со словами 180, итого 400 -320 =80... если сюда посчитать padding-left: 40px;
   то все равно не понятно где еще взялись 40?????*/
 
+.logo-img {
+	width: 140px;
+	display: inline-block;
+	vertical-align: top;
+}
 .main-navigation  {
 	margin-left: 180px;
 	display: inline-block;
 	width: 590px;
 	font-size: 14px;
+	vertical-align: top;
 }
 
 .main-navigation ul li {
-	display: inline;
+	display: inline-block;
+	vertical-align: top;
 	list-style: none;
 	}
 .main-navigation ul li a {
@@ -109,7 +118,7 @@ img {
 	padding-left: 40px;
 
 }
-.bbb:before {        /*попытка прицепить стили к псевдоэлементу провалилась*/
+.basket-simbol:before {       
     content: "\62";  
     font-size: 24pt;  
     text-align: center;  
