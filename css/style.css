@@ -61,6 +61,8 @@ body {
 .container {
 	width: 1200px;	
 	margin: 0 auto;
+	
+	
 
 }
 
@@ -103,17 +105,29 @@ body {
 	padding-left: 40px;
 
 }
-.basket-simbol:before {       
-    content: "\62";  
-    font-size: 24pt;  
-    text-align: center;  
-    line-height: 42px;  
-    color: #fff;  
-    background: #ddd;  
-    float: left;  
-    position: relative;  
-    top: 30px;  
-  
-}  
+
+ 
+.symbol-bin {
+	position: relative;
+}
+
+
+.symbol-bin:before {
+background: url('../img/bin.png') no-repeat;
+content: '';
+position: absolute;
+left: -10px; /*(отступ для символа корзины слева)*/
+top:  0;  /*(отступ для символа корзины сверху)*/
+height: 28px ; (здесь указать высоту элементы корзина)
+width: 32px ; (здесь указать ширину элементы корзина)*/
+}
+
+
+/*Работа со слайдером*/
+
+.promo {
+	height: 310px;
+	background-color:  #3f3f3f;
+}
 
 
