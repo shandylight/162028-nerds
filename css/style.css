@@ -113,13 +113,13 @@ body {
 
 
 .symbol-bin:before {
-background: url('../img/bin.png') no-repeat;
+background: url('../img/bin1.png') no-repeat;
 content: '';
 position: absolute;
-left: -10px; /*(отступ для символа корзины слева)*/
+left: -25px; /*(отступ для символа корзины слева)*/
 top:  0;  /*(отступ для символа корзины сверху)*/
-height: 28px ; (здесь указать высоту элементы корзина)
-width: 32px ; (здесь указать ширину элементы корзина)*/
+height: 15px ; (здесь указать высоту элементы корзина)
+width: 15px ; (здесь указать ширину элементы корзина)*/
 }
 
 
