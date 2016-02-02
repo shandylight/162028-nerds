@@ -66,43 +66,52 @@ body {
 
 }
 
-  /*Вопрос 3 У меня от начала лого до начала слова Студия ширина 400, ширина лого - 140
-  отступ списка со словами 180, итого 400 -320 =80... если сюда посчитать padding-left: 40px;
-  то все равно не понятно где еще взялись 40?????*/
-
+  
 .logo-img {
 	width: 140px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: center;
 }
+
+/*расстояние между логотипом и навигацией 180, между словами 40,
+ между словом и корзиной 65*/
+
 .main-navigation  {
-	margin-left: 180px;
+	margin-left:105px;
 	display: inline-block;
 	width: 590px;
 	font-size: 14px;
-	vertical-align: top;
+	vertical-align: center;
 }
+
+.main-navigation ul {
+	display: inline-block;
+vertical-align: center;}
 
 .main-navigation ul li {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: center;
 	list-style: none;
+	
 	}
 .main-navigation ul li a {
 	text-decoration: none;
 	color:#000;
 	text-transform: uppercase;
 	padding-left: 40px;
+	display: inline-block;
 }
 
-.main-navigation .place-simbol .simbol-bin .decorate-bin {
+.place-symbol{
 	display: inline-block; 
-/*	Вопрос 4. Почему у меня не
-	 получается применить стили к слову Корзина???*/
+	vertical-align: center;
+}
+
+.symbol-bin {
 	text-decoration: none;
 	color:#000;
 	text-transform: uppercase;
-	padding-left: 40px;
+	padding-left: 55px;
 
 }
 
@@ -116,10 +125,10 @@ body {
 background: url('../img/bin1.png') no-repeat;
 content: '';
 position: absolute;
-left: -25px; /*(отступ для символа корзины слева)*/
+left: 10px; /*(отступ для символа корзины слева)*/
 top:  0;  /*(отступ для символа корзины сверху)*/
-height: 15px ; (здесь указать высоту элементы корзина)
-width: 15px ; (здесь указать ширину элементы корзина)*/
+height: 15px ; /*(здесь указать высоту элементы корзина)*/
+width: 15px ; /*(здесь указать ширину элементы корзина)*/
 }
 
 
