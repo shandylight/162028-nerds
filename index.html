@@ -1,203 +1,233 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <title>HTML Academy: Нёрдс</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/symbols-nerds.css">
+  <title>HTML Academy: Нёрдс</title>
+</head>
+<body>
 
-  	<!-- определяю место для шапки проекта -->
-  	<header class="main-header"> <!-- часть проекта с серым фоном -->
-  		  <div class="container">   
-            <div class="logo-img">
-            <img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
-            </div>
-       	    <nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
-              <ul>
-                <li>
-                 <a href="#">Студия</a>
-                </li>
-                <li>
-                 <a href="#">Клиенты</a>
-                </li>
-                <li>
-                  <a href="#">Магазин</a>
-                </li>
-                <li>
-                    <a href="#">Контакты</a>
-                </li>
-                
-              </ul>
-              <div class="place-symbol">
-                <a class="symbol-bin" href="#">
-                
-                  Корзина  
-                      
-                 </a>
-                
-              </div> <!-- отдельный блок для Корзины -->
-            </nav>
+  <!-- определяю место для шапки проекта -->
+	<header class="main-header"> <!-- часть проекта с серым фоном -->
+		  <div class="container clearfix">  
+        <!-- для родителя элементов, которым заданы свойства float нужно добавить класс "распорку" .clearfix. Почитать тут http://webcareer.ru/clearfix-na-css.html  -->
+
+
+        <div class="logo-img">
+          <img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
         </div>
-  	</header>
+
+   	
+        <div class="place-symbol">
+          <!-- Возвращаемся к иконочному шрифту) Совсем забыли про классы, которые прописаны в стилевом файле. Оттуда прямо и берем класс для корзины. То есть получается что symbol-bin - это класс для самой ссылки "Корзина", а icon-basket - это класс для иконки корзины -->
+          <a class="symbol-bin icon-basket" href="#">Корзина</a>
+        </div> <!-- отдельный блок для Корзины --> 
 
 
+        <nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
 
-<main>
+          <ul class="no-list">
+            <li>
+             <a href="#" class="main-navigation-link">Студия</a>
+            </li>
+            <li>
+             <a href="#" class="main-navigation-link">Клиенты</a>
+            </li>
+            <li>
+              <a href="#" class="main-navigation-link">Магазин</a>
+            </li>
+            <li>
+              <a href="#" class="main-navigation-link">Контакты</a>
+            </li> 
+          </ul>
+         
+        </nav>
+        <!-- Блок с корзиной выносим из блока nav, так как элемент корзина - самостоятельный элемент. Это не элемент навигации за который отвечает тег nav -->
+
+      </div>
+	</header>
+
+  <main>
+
+    <!-- Блок слайдера -->
   	<div class="promo"> 
+
       <div class="container"> <!-- хитрый контейнер для центрирования -->
 
+        <div class="slider">
+          <!-- Общий блок для всего слайдера, его позиционируем относительно(position:relative) чтобы потом, относительно его спозиционировать инпуты и блок radio-button -->
 
-        <div class="radio-button"> <!-- создаем радио кнопки для слайдера -->
-          <label for="button1"> 
-            <input type="radio" id="button1" name="target" checked>
-          </label>
-          <label for="button2"> 
-            <input type="radio" id="button2" name="target">
-          </label>
-          <label for="button3">
-            <input type="radio" id="button3" name="target"> 
-           </label>
+          <input type="radio" id="button1" name="target" checked>
+          <input type="radio" id="button2" name="target">
+          <input type="radio" id="button3" name="target"> 
+
+          <div class="radio-button"> <!-- создаем радио кнопки для слайдера --> 
+            <!-- чтобы сделать слайдер нам нужно задать 3 инпута. Так как инпуты нужно стилизовать - сделать их такими, как задумал дизайнер, мы будем стилизовать label. Вы уже знаете зачем label добавляется for="", а input id="". Поэтому за выбор слайда у нас будет отвечать не сам input, а привязанный к нему label(это не обязательно должно быть слово). Вы уже объединили их в блок, который потом спозиционируем посередине.  -->
+
+            <label for="button1"> </label>
+            <label for="button2"> </label>
+            <label for="button3"> </label>
+          </div>
+
+          <div class="slides">   <!-- прописываю каждый слайд по отдельности --> 
+
+            <div class="slide active">   <!-- Слайд 1 -->
+              <div class="slogan-item">
+                <div class="slogan-big">Долго, дорого,  скрупулезно.</div>
+                <p class="slogan-small">Математически выверенный дизайн <br>  для вашего сайта или мобильного приложения</p>
+                <a class="btn-slide btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              </div>
+
+              <div class="image-item">
+                <img src="img/slide1.png" width="338" height="231" alt="Картинки слайдера">
+              </div>
+            </div> 
+
+            <div class="slide"> <!-- Слайд 2 -->
+              <div class="slogan-item">
+                <p class="slogan-big">Любите ли вы математику, как любим ее мы?</p>
+                <p>Нашим дизайнерам мы удаляем нейроны, ответственные
+                за креатив, чтобы дать им возможность все просчитать </p>
+                <a class="btn-slide btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              </div>
+              <div class="image-item">
+                <img src="img/slide2.png" width="230" height="249" alt="Картинки слайдера">
+              </div>
+            </div>
+
+            <div class="slide"> <!-- Слайд 3 -->
+              <div class="slogan-item">
+                <p class="slogan-big">Только наркотики, только хардкор!</p>
+                <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
+                <a class="btn-slide btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              </div>
+              <div class="image-item">
+                <img src="img/slide3.png" width="333" height="319" alt="Картинки слайдера">
+              </div>
+            </div>
+
+          </div> 
         </div>
 
-
-        <div class="slides">   <!-- прописываю каждый слайд по отдельности --> <!-- Я подумала, что верно, по сути стили у наполнителя слайдера одинаковые будут, только картинки разные (только пока еще не понимаю, как встанут картинки с разными размерами) -->
-          
-          <div class="slide active">   <!-- Слайд 1 -->
-            <div class="slogan-item">
-              <b class="slogan-big">Долго, дорого,  скрупулезно.</b>
-              <p>Математически выверенный дизайн  для вашего сайта или мобильного</p>
-              <a class="btn-slide" href="#">УЗНАТЬ БОЛЬШЕ</a>
-            </div>
-
-            <div class="image-item">
-               <img src="img/slide1.png" width="338" height="231" alt="Картинки слайдера">
-            </div>
-          </div> 
-          
-          <div class="slide"> <!-- Слайд 2 -->
-            <div class="slogan-item">
-              <b class="slogan-big">Любите ли вы математику, как любим ее мы?</b>
-              <p>Нашим дизайнерам мы удаляем нейроны, ответственные
-                  за креатив, чтобы дать им возможность все просчитать </p>
-              <a class="btn-slide" href="#">УЗНАТЬ БОЛЬШЕ</a>
-            </div>
-            <div class="image-item">
-               <img src="img/slide2.png" width="230" height="249" alt="Картинки слайдера">
-            </div>
-          </div>
-          
-          <div class="slide"> <!-- Слайд 3 -->
-            <div class="slogan-item">
-              <b class="slogan-big">Только наркотики, только хардкор!</b>
-              <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
-              <a class="btn-slide" href="#">УЗНАТЬ БОЛЬШЕ</a>
-            </div>
-            <div class="image-item">
-               <img src="img/slide3.png" width="333" height="319" alt="Картинки слайдера">
-            </div>
-          </div>
-
-         </div> 
-    </div>
+      </div>
     </div>
 
-
-
+    <!-- Центральный блок - контент -->
     <div class="main-centre"> <!-- центральный блок на белом фоне -->
+
       <div class="container">
-          <ul class="block-columns"> <!-- блок для колонок -->
-            <li>
-              <div class="site">
-                <img src="img/site.jpg" width="240" height="124" alt="Картинки веб-сайты">
-                <h2>Веб-сайты</h2>
-                <p>Мир никогда не будет прежним после того как, увидит ваш сайт!</p>
-                <a class="btn-site" href="#">Заказать</a>
-              </div>
-            </li>
-            
-            <li>
-              <div class="applications">
-                <img src="img/applications.jpg" width="240" height="124" alt="Картинки приложения">
-                <h2>Приложения</h2>
-                <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
-                <a class="btn-applications" href="#">Заказать</a>
-              </div>
-            </li>
 
-            <li>
-              <div class="presentations">
-                <img src="img/presentations.jpg" width="240" height="124" alt="Картинки прeзентации">
-                <h2>Презентации</h2>
-                <p>Вы даже не подозреваете,  насколько вы изумительны!</p>
-                <a class="btn-presentations" href="#">Заказать</a>
-              </div>
-            </li>
-          </ul>
-          <div class="description">
-            <div class="description-first">
-              <p class="slogan">
-                <b>Мы — маленькая, но гордая дизайн-студия из Краснодара. 
-                </b>
-              </p> <!-- хочу описать через h1, так как может быть поиск через поисковик по "дизайн студия из Краснодара" -->
-              <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
-              </p>
-              <ul class="orders">
-                <li class="title-orders">Выполняем заказы на разработку:
-                  <ul class="text-orders">
-                    <li>Веб-сайтов любой сложности</li>
-                    <li>Мобильных приложений для iOS и Android</li>
-                    <li>Слайдшоу и видео для корпоративных презентаций</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="description-second">
-              <img src="img/logo.png" width="188" height="77" alt="Нижний логотип компании">
-              <b>Since 2004</b>
-               <ul class="profits">
-                <li class="title-profits">КАК Мы работаем:
-                  <ul class="text-profits">
-                    <li>C самоотдачей 146%</li>
-                    <li>Мобильных приложений для iOS и Android</li>
-                    <li>По предоплате 50%</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <!-- В данном случае лучше не делать через список - замените ul и li на дивы. -->
 
-          <div class="portfolio">
-            <ul class="portfolio-items">
-              <li>
-                <a href="">
-                  <img src="img/glukhanko.png" width="209" height="116" alt="Логотип Глуханко">
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="img/htmlacademy.png" width="209" height="116" alt="Логотип html академии">
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="img/barbershop.png" width="209" height="116" alt="Логотип магазина">
-                </a>
+        <ul class="block-columns no-list"> <!-- блок для колонок -->
+
+          <li>
+            <div class="site">
+              <img src="img/site.jpg" width="240" height="124" alt="Картинки веб-сайты">
+              <b>Веб-сайты</b>
+              <p>Мир никогда не будет прежним после того как, увидит ваш сайт!</p>
+              <a class="btn-site" href="#">Заказать</a>
+            </div>
+          </li>
+          
+          <li>
+            <div class="applications">
+              <img src="img/applications.jpg" width="240" height="124" alt="Картинки приложения">
+              <b>Приложения</b>
+              <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
+              <a class="btn-applications" href="#">Заказать</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="presentations">
+              <img src="img/presentations.jpg" width="240" height="124" alt="Картинки прeзентации">
+              <b>Презентации</b>
+              <p>Вы даже не подозреваете,  насколько вы изумительны!</p>
+              <a class="btn-presentations" href="#">Заказать</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Блок с текстом, описанием и логотипом -->
+        <div class="description">
+
+          <div class="description-first">
+            <b>Мы — маленькая, но гордая дизайн-студия из Краснодара. </b> <!-- хочу описать через h1, так как может быть поиск через поисковик по "дизайн студия из Краснодара" -->
+            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
+            </p>
+
+             <!-- Тут наверно заработались и неправильно разметили: список text-orders - правильно, а вот заголовок "Выполняем заказы на разработку" нужно заменить на div и убрать список profits"  -->
+            <ul class="orders">
+              <li class="title-orders">Выполняем заказы на разработку:
+
+                <ul class="text-orders no-list">
+                  <li>Веб-сайтов любой сложности</li>
+                  <li>Мобильных приложений для iOS и Android</li>
+                  <li>Слайдшоу и видео для корпоративных презентаций</li>
+                </ul>
               </li>
             </ul>
           </div>
+
+          <div class="description-second">
+            <img src="img/logo.png" width="188" height="77" alt="Нижний логотип компании">
+            <b>Since 2004</b>
+
+            <!-- Тут наверно заработались и неправильно разметили: список text-profits - правильно, а вот заголовок "Как мы работаем" нужно заменить на div и убрать список profits"  -->
+            <ul class="profits">
+              <li class="title-profits">КАК Мы работаем:
+
+              <ul class="text-profits no-list">
+                <!-- Здесь правильно -->
+                <li>C самоотдачей 146%</li>
+                <li>Мобильных приложений для iOS и Android</li>
+                <li>По предоплате 50%</li>
+              </ul>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Блок с логотипами -->
+        <div class="portfolio">
+          <ul class="portfolio-items no-list">
+            <li>
+              <a href="">
+                <img src="img/glukhanko.png" width="209" height="116" alt="Логотип Глуханко">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="img/htmlacademy.png" width="209" height="116" alt="Логотип html академии">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="img/barbershop.png" width="209" height="116" alt="Логотип магазина">
+              </a>
+            </li>
+          </ul>
+        </div>
    
-   </div>
+      </div>  
     </div>
 
-
+    <!-- Блок карты-->
     <div class="map">
-    <div class="container"> <!-- блок карта -->
+
+      <div class="container">
+
         <div class="wrapper-map">  <!-- обои для карты и всего, что на ней находится -->
+
           <div> <!-- место для яндекс карты -->
-              <img src="" width="1080" height="450" alt="Яндекс карта">
+            <img src="" width="1080" height="450" alt="Яндекс карта">
           </div> 
+
           <div class="wrapper-contact"> <!-- блок для расположения контакта на карте -->
+
             <div class="title-contact"><!-- название студии на зоголовке -->
               <span>
                 <b>Nerds</b>
@@ -206,10 +236,12 @@
             </div> 
             <div class="address-contact">
               <p> 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-                <br>
-                  тел. +7 (812) 275-75-75
-             </p>
-            <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
+              <br>
+              <!-- Убираем br, мы зададим конкретную ширину блоку и слов сами передвинутся -->
+              тел. +7 (812) 275-75-75
+              <!-- телефон делаем ссылкой  <a href="tel: +7 (812) 275-75-75"> +7 (812) 275-75-75 </a> -->
+              </p>
+              <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
             </div>
             <div class="label-contact">
               <img src="img/label-contact.png" width="230" height="249" alt="Иконка на карте">
@@ -217,62 +249,56 @@
             <div class="logo-contact">
               <img src="img/logo-contact.png" width="93" height="39" alt="Логотип на карте">
             </div>
-                    
+
           </div>
 
         </div>
-   
-   </div>      
+     
+      </div>      
     </div>
- </main>
 
-       
-    <footer class="main-footer"> 
-      <div class="container">
-        <div class="footer"> 
-          <div class="socialsite-buttons"> <!-- ПОТОМ ПЕРЕДЕЛАЮ С СИМВОЛАМИ -->
-            <ul>
-              <li>
-                <a href="#">
-                  <img src="img/icon1.jpg" width="63" height="63" alt="Иконка в контакте">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/icon2.jpg" width="63" height="63" alt="Иконка в фейсбоке">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/icon3.jpg" width="63" height="63" alt="Иконка в ЖЖ">
-                </a>
-              </li>
-            </ul>
-            
-          </div>
-          <div class="footer-text">
-            <p class="text-discount">
-              <b>
-              Давайте дружить, это выгодно!
-              </b>
-              Скидка 10% для друзей из социальных сетей.
-            </p>
-          </div>
-        </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer"> 
+
+    <div class="container">
+      <div class="footer"> 
+        <div class="socialsite-buttons"> <!-- ПОТОМ ПЕРЕДЕЛАЮ С СИМВОЛАМИ -->
+          <ul class="no-list">
+            <li>
+              <a href="#">
+                <img src="img/icon1.jpg" width="63" height="63" alt="Иконка в контакте">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icon2.jpg" width="63" height="63" alt="Иконка в фейсбоке">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icon3.jpg" width="63" height="63" alt="Иконка в ЖЖ">
+              </a>
+            </li>
+          </ul>
         </div>
 
-    </footer>
+        <div class="footer-text">
+          <p class="text-discount">
+          <b>
+          Давайте дружить, это выгодно!
+          </b>
+          Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
 
-         
-       </div>
-            
       </div>
+    </div>
+  </footer>
 
-  	
-  </body>
+</body>
 </html>
-
-
 
 
 <!--  <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive">Базовый HTML и CSS</a>».</p> -->
