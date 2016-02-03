@@ -5,21 +5,12 @@ body {
 	
 }
 
-
 .clearfix::after {
 	content: '';
 	clear: both;
 	display: table;
 }
 
-/*!обратить внимание - Подсказка от наставника - 
-в макете часто повторяются одни и теже свойства для списков 
-очень удобно, когда вы пишете создаете общий класс один раз,
- прописываете в нем свойства
- и потом просто применяете этот класс к элементам.
-  Т.о. вы ускоряете процесс работы.
- Я добавила класс no-list который содержит правила 
- отмены отсутпов для списка и убирает маркеры.*/
 .no-list {
 	list-style: none;
 	margin: 0;
@@ -30,7 +21,6 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	background-color: #eee;
-	/*height: 430px;*/
 }
 .container {
 	margin: 0 auto;
@@ -39,40 +29,19 @@ body {
 
 .logo-img {
 	display: inline-block;
-	/* !обратить внимание - задала float: left - это значит что блок 
-	которому задано это свойство будет 
-	"прилипать" к левой стороне своего "родителя"*/
 	float: left;
 	vertical-align: top;
 	width: 140px;
-	 /* !обратить внимание для vertical-align используем только значения
-			top - выравнивание по верхней линии;
-			middle - вырванивание по середине;
-			bottom - выравнивание по нижней линии
-	  */
-	/*vertical-align: center;*/
-	
 }
 
-/*расстояние между логотипом и навигацией 180, между словами 40,
- между словом и корзиной 65*/
+
 
 .main-navigation  {
-	/* !обратить внимание - добавила отступ сверху для main-navigation 
-	и задала float: right - это значит что блок которому задано это свойство будет 
-	"прилипать" к правой стороне своего "родителя" */
-
 	float: right;
 	margin-top: 41px;
 	margin-right: 20px;
-	/*margin-left: 105px;*/
 	display: inline-block;
 	vertical-align: top;
-	/*width: 590px;*/
-	/* Ширина не нужна*/
-	/*font-size: 14px;*/
-	/* шрифт задаем элементам строчным, текстовым*/
-	
 }
 
 .main-navigation ul {
@@ -85,11 +54,6 @@ body {
 	vertical-align: top;
 }
 
-/* !обратить внимание - чтобы не делать такую
- вложенность можно задать класс ссылке, 
-то есть вместо вашего .main-navigation ul li a
-стал .main-navigation-link
-*/
 .main-navigation-link {
 	text-decoration: none;
 	color: #000;
@@ -100,11 +64,6 @@ body {
 }
 
 .place-symbol {
-	/* !обратить внимание - задала float: right 
-	- это значит что блок которому задано это свойство 
-	будет "прилипать" к правой стороне своего "родителя"5;
-	добавила отступ сверху для блока "корзины" */
-
 	display: inline-block; 
 	float: right;
 	padding-top: 41px;
@@ -117,32 +76,14 @@ body {
 	text-transform: uppercase;
 	padding-left: 35px;
 	font-size: 14px;
-	/* !обратить внимание - исправила на 35px отступ 
-	слева от слова "корзина", было 55px */
 }
-
-
-/* Это уже не нужно, можете удалить. С иконочным
- шрифтом все оказалось на много проще. 
-Нужно просто было прописать класс. Теперь иконка корзины
- как текстовый элемент и вы можете задавать 
-ему свойства как для букв - color, font-size */
-/*.symbol-bin::before {
-	background: url('../img/bin1.png') no-repeat;
-	content: "\62";
-	position: absolute;
-	font-size: 30px;
-	left: 10px; 
-	top:  0;  
-	height: 25px; 
-	width: 25px; 
-}*/
-
-
 
 .icon-basket:hover {
 	color: #fb565a;
 }
+
+
+/* =========  Пусть слайдер пока остается в таком виде ========= */
 
 /*Работа со слайдером*/
 
@@ -165,17 +106,24 @@ body {
 
 }
 
-.slide {
-	width: 100%;
+.slide {	
 	height: 100%;
+	width: 100%;
+}
 
+/* чтобы скрыть какой-либо блок достаточно задать ему свойство 
+display:none 
+Про :nth-child(2) будут рассказывать на вебинаре
+*/
 
+.slide:nth-child(2),
+.slide:nth-child(3) {
+	display: none;
 }
 
 .slogan-item {
 	display: inline-block;
 	width: 400px;
-
 }
 .slogan-big {
 	font-size: 36px; 
@@ -210,7 +158,7 @@ body {
 	text-decoration: none;
     text-align: center;
     vertical-align: top;
-	/*color: #fb565a;*/
+	
 }
 
 .image-item {
@@ -218,11 +166,158 @@ body {
 	float:right;
 }
 
+/* =========  Пусть слайдер пока остается в таком виде ========= */
+
+
+
+/* ====  Разметка блока с услугами ==== */
+/*
+1. элементам li внутри block-columns задать display: inline-block и ширину
+(замерить в макете);
+2. внутри li не нужен еще один div. Li итак блочный элемент и 
+лишняя вложенность нам не нужна. 
+классы для этих дивов лучше перенесите для li (я сделала для 
+первого li, повторите для двух других)
+*/
+
+.block-columns {
+	margin-left: -38px;
+	margin-right: -38px;
+}
+.bk {
+	display: inline-block;
+	width: 240px;
+	vertical-align: top;
+	margin-left: 38px;
+	margin-right: 38px;
+
+
+}
+
+h2 {
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	
+
+
+}
+
+.block-columns p {
+	font-size: 15px;
+	line-height: 22px;
+	
+
+}
+
+.btn-red {
+    background: #fb565a;
+}
+.btn-green {
+    background: #01a25e;
+}
+.btn-yellow {
+    background: #f1cf62;
+}
+
+.btn-columns {
+border-radius: 2px;
+font-size: 12px;
+color: #fff;
+display: inline-block;
+padding: 0 38px;
+line-height: 38px;
+height: 38px;
+text-transform: uppercase;
+text-decoration: none;
+text-align: center;
+vertical-align: top;
+}
+
+
+
+/* ====  Разметка блока c текстом ==== */
+/*
+1. Блоки description-first и description-second можете сделать 
+через инлайн-блок или флоаты, 
+но в любом случае померить ширину в фотошопе и задать ее
+2. 
+*/
+
+.description {
+color: #181818;
+font-size: 16px;
+font-weight: 300;
+line-height: 22px;
+padding: 70px 0 45px 0;
+border-bottom: 2px solid #eee;
+}
+
+.description-first{
+float: left;
+width: 580px;
+}
+
+.description-second{
+float: right;
+width: 240px;
+}
+
+.description-slogan{
+ font-size: 36px;
+ font-weight: 500;
+ line-height: 36px;
+ padding-bottom: 5px;
+}
+.title-orders {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 44px 0 0 0;
+    text-transform: uppercase;
+}
+.text-orders {
+    margin: 21px 0 0 0;
+}
+.text-orders li {
+padding: 0 0 23px 35px;
+position: relative;
+}
+
+.text-orders li:before {
+    border: 1px solid #fb565a;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 25px;
+}
+
+
+
+/* ====  Разметка блока c логотипами ==== */
+/*
+1. для  элементов li в portfolio-items задать
+ display: inline-block, одинаковую ширину,и 
+ margin по бокам
+2.
+*/
 
 
 
 
+/* ====  Разметка блока карты  ==== */
+/*
+1. для wrapper-map задаете свойство position: relative; 
+- что дает понять браузеру от 
+какого элемента отсчитывать координаты для блока у которого
+ будет position: absolute;
+2. wrapper-contact задаем свойство position: absolute; и 
+отступы сверху (top:) и слева(left)
+*/
 
 
+ 
 
-
+/*!!P.S: помним что для каждого свойства display:inline-block  
+есть обязательное замечательно свойство vertical-align: top;*/

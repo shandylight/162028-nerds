@@ -10,49 +10,46 @@
 
   <!-- определяю место для шапки проекта -->
 	<header class="main-header"> <!-- часть проекта с серым фоном -->
-		  <div class="container clearfix">  
-        <!-- для родителя элементов, которым заданы свойства float нужно добавить класс "распорку" .clearfix. Почитать тут http://webcareer.ru/clearfix-na-css.html  -->
+	  <div class="container clearfix">  
+      <!-- для родителя элементов, которым заданы свойства float нужно добавить класс "распорку" .clearfix. Почитать тут http://webcareer.ru/clearfix-na-css.html  -->
 
 
-        <div class="logo-img">
-          <img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
-        </div>
-
-   	
-        <div class="place-symbol">
-          <!-- Возвращаемся к иконочному шрифту) Совсем забыли про классы, которые прописаны в стилевом файле. Оттуда прямо и берем класс для корзины. То есть получается что symbol-bin - это класс для самой ссылки "Корзина", а icon-basket - это класс для иконки корзины -->
-          <a class="symbol-bin icon-basket" href="#">Корзина</a>
-        </div> <!-- отдельный блок для Корзины --> 
-
-
-        <nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
-
-          <ul class="no-list">
-            <li>
-             <a href="#" class="main-navigation-link">Студия</a>
-            </li>
-            <li>
-             <a href="#" class="main-navigation-link">Клиенты</a>
-            </li>
-            <li>
-              <a href="#" class="main-navigation-link">Магазин</a>
-            </li>
-            <li>
-              <a href="#" class="main-navigation-link">Контакты</a>
-            </li> 
-          </ul>
-         
-        </nav>
-        <!-- Блок с корзиной выносим из блока nav, так как элемент корзина - самостоятельный элемент. Это не элемент навигации за который отвечает тег nav -->
-
+      <div class="logo-img">
+        <img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
       </div>
+
+ 	
+      <div class="place-symbol">
+        <a class="symbol-bin icon-basket" href="#">Корзина</a>
+      </div> <!-- отдельный блок для Корзины --> 
+
+
+      <nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
+
+        <ul class="no-list">
+          <li>
+           <a href="#" class="main-navigation-link">Студия</a>
+          </li>
+          <li>
+           <a href="#" class="main-navigation-link">Клиенты</a>
+          </li>
+          <li>
+            <a href="#" class="main-navigation-link">Магазин</a>
+          </li>
+          <li>
+            <a href="#" class="main-navigation-link">Контакты</a>
+          </li> 
+        </ul>
+       
+      </nav>
+      
+    </div>
 	</header>
 
   <main>
 
     <!-- Блок слайдера -->
   	<div class="promo"> 
-
       <div class="container"> <!-- хитрый контейнер для центрирования -->
 
         <div class="slider">
@@ -118,57 +115,60 @@
 
       <div class="container">
 
-        <!-- В данном случае лучше не делать через список - замените ul и li на дивы. -->
-
         <ul class="block-columns no-list"> <!-- блок для колонок -->
 
-          <li>
-            <div class="site">
+        <!-- из этого блока я удалила лишний див - обертка для всех элементов, но добавила див как обертку для картинки. -->
+          <li class="bk">
+            <div>
               <img src="img/site.jpg" width="240" height="124" alt="Картинки веб-сайты">
-              <b>Веб-сайты</b>
-              <p>Мир никогда не будет прежним после того как, увидит ваш сайт!</p>
-              <a class="btn-site" href="#">Заказать</a>
             </div>
-          </li>
-          
-          <li>
-            <div class="applications">
-              <img src="img/applications.jpg" width="240" height="124" alt="Картинки приложения">
-              <b>Приложения</b>
-              <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
-              <a class="btn-applications" href="#">Заказать</a>
-            </div>
+            <h2>Веб-сайты</h2>
+            <p>Мир никогда не будет прежним после того как, увидит ваш сайт!</p>
+            <a class="btn-columns btn-red" href="#">Заказать</a>
           </li>
 
-          <li>
-            <div class="presentations">
-              <img src="img/presentations.jpg" width="240" height="124" alt="Картинки прeзентации">
-              <b>Презентации</b>
-              <p>Вы даже не подозреваете,  насколько вы изумительны!</p>
-              <a class="btn-presentations" href="#">Заказать</a>
+          
+          <li class="bk">
+            <div >
+              <img src="img/applications.jpg" width="240" height="124" alt="Картинки приложения">
             </div>
+              <h2>Приложения</h2>
+              <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
+              <a class="btn-columns btn-green" href="#">Заказать</a>
+            
+          </li>
+
+          <li class="bk">
+            <div >
+              <img src="img/presentations.jpg" width="240" height="124" alt="Картинки прeзентации">
+            </div>
+              <h2>Презентации</h2>
+              <p>Вы даже не подозреваете,  насколько вы изумительны!</p>
+              <a class="btn-columns btn-yellow" href="#">Заказать</a>
+            
           </li>
         </ul>
 
         <!-- Блок с текстом, описанием и логотипом -->
-        <div class="description">
+        <div class="description" clearfix>
 
           <div class="description-first">
-            <b>Мы — маленькая, но гордая дизайн-студия из Краснодара. </b> <!-- хочу описать через h1, так как может быть поиск через поисковик по "дизайн студия из Краснодара" -->
+            
+            <div class="description-slogan">
+              <b>Мы — маленькая, но гордая дизайн-студия из Краснодара. </b>
+            </div> 
             <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
             </p>
 
              <!-- Тут наверно заработались и неправильно разметили: список text-orders - правильно, а вот заголовок "Выполняем заказы на разработку" нужно заменить на div и убрать список profits"  -->
-            <ul class="orders">
-              <li class="title-orders">Выполняем заказы на разработку:
-
+              <div class="title-orders">Выполняем заказы на разработку:</div>
                 <ul class="text-orders no-list">
-                  <li>Веб-сайтов любой сложности</li>
+                  <li> 
+                    Веб-сайтов любой сложности</li>
                   <li>Мобильных приложений для iOS и Android</li>
                   <li>Слайдшоу и видео для корпоративных презентаций</li>
                 </ul>
-              </li>
-            </ul>
+              
           </div>
 
           <div class="description-second">
@@ -176,18 +176,15 @@
             <b>Since 2004</b>
 
             <!-- Тут наверно заработались и неправильно разметили: список text-profits - правильно, а вот заголовок "Как мы работаем" нужно заменить на div и убрать список profits"  -->
-            <ul class="profits">
-              <li class="title-profits">КАК Мы работаем:
-
+            
+              <div class="title-profits">КАК Мы работаем:
               <ul class="text-profits no-list">
                 <!-- Здесь правильно -->
                 <li>C самоотдачей 146%</li>
                 <li>Мобильных приложений для iOS и Android</li>
                 <li>По предоплате 50%</li>
               </ul>
-
-              </li>
-            </ul>
+              </div>          
           </div>
         </div>
 
@@ -265,6 +262,7 @@
     <div class="container">
       <div class="footer"> 
         <div class="socialsite-buttons"> <!-- ПОТОМ ПЕРЕДЕЛАЮ С СИМВОЛАМИ -->
+          <!--  ПОРА ПЕРЕДЕЛАТЬ С ИКОНОЧНЫМ ШРИФТОМ ) -->
           <ul class="no-list">
             <li>
               <a href="#">
