@@ -454,9 +454,57 @@ a:hover {
 	right: 235px;
 }
 
-
-
 /* ====  Разметка блока footer  ==== */
+
+.socialsite-buttons {
+	float: left;
+	width: 320px;
+}
+.socialsite-buttons a{
+	
+	background: #e1e1e1;
+    border-radius: 50%;
+    display: inline-block; 
+    margin: 5px 10px;
+    padding: 5px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+   
+
+}
+
+.btn-site {
+	display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+
+
+.footer-text{
+	float: right;
+	width: 555px;
+	
+}
+
+.text-discount{
+	font-size: 36px;
+    line-height: 36px;
+    font-weight: 300;     /*Откуда здесь взялся марджин 36????*/
+}
+.sold {
+	font-size: 16px;
+    font-weight: 500;
+
+
+}
+
+
+   
+
+
 
 /*
 1. для socialsite-buttons задать ширину и float: left; 
