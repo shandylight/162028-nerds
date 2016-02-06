@@ -44,6 +44,11 @@ body {
 	vertical-align: top;
 }
 
+.navigation-menu .active{
+    border-bottom: 2px solid #FB565A;
+}
+
+
 .main-navigation ul {
 	display: inline-block;
 	vertical-align: top;
@@ -177,6 +182,12 @@ display:none
 первого li, повторите для двух других)
 */
 
+.main-centre{
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+
 .block-columns {
 	margin-left: -38px;
 	margin-right: -38px;
@@ -210,11 +221,29 @@ h2 {
 .btn-red {
     background: #fb565a;
 }
+.btn-red:hover {
+    background: #d6494d;
+}
+.btn-red:active {
+    background: #b63538;
+}
 .btn-green {
+    background: #00ca74;
+}
+.btn-green:hover {
     background: #01a25e;
 }
+.btn-green:active {
+    background: #009053;
+}
 .btn-yellow {
-    background: #f1cf62;
+    background: #efc84a;
+}
+.btn-yellow:hover {
+    background: #d6ae2c;
+}
+.btn-yellow:active {
+    background: #c09b24;
 }
 
 .btn-columns {
@@ -291,8 +320,8 @@ float: right;
 width: 240px;
 }
 
-.description_logo {
-	margin: -10px 0 70px 3px;
+.description-logo {
+	
     text-align: center;
 }
 
@@ -301,6 +330,24 @@ width: 240px;
     position: relative;
     text-align: center;
     text-transform: uppercase;
+}
+
+.description-year:before {
+    left: -10px;
+}
+.description-year:after{
+	right: 10px;
+}
+
+.description-year:before, .description-year:after{
+    background: #eee;
+    content: '';
+    top: 10px;
+    height: 2px;
+    position: absolute;
+    margin: 0 0 0 12px;
+    width: 55px;
+
 }
 
 .title-profits {
@@ -321,6 +368,9 @@ width: 240px;
 	
     padding: 0 0 23px 35px;
     position: relative;
+    font-size: 16px;
+    
+
 }
 .text-profits li:before {
     border: 1px solid #fb565a;
@@ -332,7 +382,7 @@ width: 240px;
    }
 
    .portfolio {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #eee;
     margin: 0;
     padding: 40px 20px 10px;
 }
@@ -347,8 +397,8 @@ width: 240px;
 .portfolio-items a{
 	opacity: 0.2;
 }
-a:hover {
- background-color: transparent;
+.portfolio-items a:hover {
+ opacity: 1;
 }
 
 
@@ -403,7 +453,7 @@ a:hover {
 	background: #fff;
     color: #666;
     padding: 32px 24px;
-    width: 250px;
+    width: 202px;
 }
 
 .title-contact{
@@ -427,6 +477,7 @@ a:hover {
 
 .btn-top {
 	 margin-top: 38px;
+	 text-align: center;
 
 }
 .btn-contact {
@@ -436,10 +487,17 @@ a:hover {
     font-size: 12px;
     font-weight: 300;
     line-height: 18px;
+    width: 160px;
+	
    
-    padding: 15px 55px;
+    padding: 15px 50px;
     text-decoration: none;
     text-transform: uppercase;
+
+
+} 
+.btn-contact:hover {
+	background:#d6494d;
 }
 .label-contact {
 	position: absolute;
@@ -448,11 +506,11 @@ a:hover {
 
 }
 
-.logo-contact{
+/*.logo-contact{
 	position: absolute;
 	top: 170px;
 	right: 235px;
-}
+}*/
 
 /* ====  Разметка блока footer  ==== */
 
@@ -480,8 +538,24 @@ a:hover {
 }
 
 
+.footer {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+.icon-vk,.icon-facebook,.icon-instagramm {
+	font-size: 26px;
+	color: #fff;
+	line-height: 60px;
 
+}
 
+.socialsite-buttons a:hover{
+	background:#fb565a;
+}
+
+.socialsite-buttons a:active{
+	background:#d6494d;
+}
 
 .footer-text{
 	float: right;
