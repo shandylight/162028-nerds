@@ -139,10 +139,7 @@ display:none
 	font-weight: 300;
 
 }
-.btn {  /*вообще не поняла, как мы знаем, 
-что эти действия к кнопке относятся, почему
-	нельзя біло прописать что то типа border:solid 2px #fb565a
-	 в классе .btn-slide  */
+.btn { 
 	background: #fb565a;
     margin-top: 18px;
     padding: 0 70px;
@@ -258,10 +255,6 @@ float: left;
 width: 580px;
 }
 
-.description-second{
-float: right;
-width: 240px;
-}
 
 .description-slogan{
  font-size: 36px;
@@ -293,6 +286,70 @@ position: relative;
     width: 25px;
 }
 
+.description-second{
+float: right;
+width: 240px;
+}
+
+.description_logo {
+	margin: -10px 0 70px 3px;
+    text-align: center;
+}
+
+.description-year {
+	margin-top: 20px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-profits {
+	font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 55px 0 0 0;
+    text-transform: uppercase;
+}
+
+.text-profits{
+    padding: 0;
+    list-style: none;
+    margin: 21px 0 0 0;
+}
+
+.text-profits li {
+	
+    padding: 0 0 23px 35px;
+    position: relative;
+}
+.text-profits li:before {
+    border: 1px solid #fb565a;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 25px;
+   }
+
+   .portfolio {
+    border-bottom: 2px solid #000;
+    margin: 0;
+    padding: 40px 20px 10px;
+}
+.portfolio-items li {
+	display: inline-block;
+    margin: 0 30px;
+    text-align: center;
+    vertical-align: middle;
+    width: 209px;
+}
+
+.portfolio-items a{
+	opacity: 0.2;
+}
+a:hover {
+ background-color: transparent;
+}
 
 
 /* ====  Разметка блока c логотипами ==== */
@@ -300,9 +357,23 @@ position: relative;
 1. для  элементов li в portfolio-items задать
  display: inline-block, одинаковую ширину,и 
  margin по бокам
-2.
-*/
+2. задать нижний border и margin-bottom для блока portfolio
 
+3. для элементов логотипов похожие стили, как мы делали для блоков услуг, 
+с отрицательным марджином по бокам
+
+.portfolio-items {
+	margin: 0 -20px;
+}
+.portfolio-items li {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin: 0 20px;
+	width: 260px;
+} 
+
+*/
 
 
 
@@ -317,7 +388,92 @@ position: relative;
 */
 
 
- 
+.wrapper-map {
+	position: relative;
+	width: 100%;
+	height: 415px;
+	background-color: #eee;
 
-/*!!P.S: помним что для каждого свойства display:inline-block  
+}
+
+.wrapper-contact {
+	position: absolute;
+	top: 90px;
+	left: 160px;
+	background: #fff;
+    color: #666;
+    padding: 32px 24px;
+    width: 250px;
+}
+
+.title-contact{
+	font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.address-contact{
+	font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    margin: 12px 0;
+}
+
+.phone-contact a{
+	color: #000;
+	text-decoration: none;
+}
+
+.btn-top {
+	 margin-top: 38px;
+
+}
+.btn-contact {
+	background: #fb565a;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+   
+    padding: 15px 55px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.label-contact {
+	position: absolute;
+	top: 110px;
+	right: 200px;
+
+}
+
+.logo-contact{
+	position: absolute;
+	top: 170px;
+	right: 235px;
+}
+
+
+
+/* ====  Разметка блока footer  ==== */
+
+/*
+1. для socialsite-buttons задать ширину и float: left; 
+тогда блок прилепится к левой части родительского элемента
+2. для footer-text задать также ширину и float: right;
+3. к классу footer добавить класс clearfix - помним, что при использовании флоатов, 
+этот класс обязательно использовать для родительского класса этих float-элементов.
+Элементы, которым задано свойства float имеют особенность выпадать из потока. 
+и вот Так называемая "распорка" позволяет блоку в котором лежат float-элементы "быть равной высоте этих элементов".
+В курсах академии про это есть  https://htmlacademy.ru/courses/65/run/10  до  https://htmlacademy.ru/courses/65/run/16
+4. Социальные кнопки сделать просто ссылками с применением иконочных шрифтов.
+*/
+
+
+
+
+
+
+/* P.S: помним что для каждого свойства display:inline-block  
 есть обязательное замечательно свойство vertical-align: top;*/

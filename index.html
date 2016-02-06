@@ -117,7 +117,6 @@
 
         <ul class="block-columns no-list"> <!-- блок для колонок -->
 
-        <!-- из этого блока я удалила лишний див - обертка для всех элементов, но добавила див как обертку для картинки. -->
           <li class="bk">
             <div>
               <img src="img/site.jpg" width="240" height="124" alt="Картинки веб-сайты">
@@ -150,7 +149,8 @@
         </ul>
 
         <!-- Блок с текстом, описанием и логотипом -->
-        <div class="description" clearfix>
+        <div class="description clearfix">
+          <!--  Здесь класс clearfix был вынесен из кавычек с классом. Я вернула его на место и ваши блоки выстроили так как должны были.  -->
 
           <div class="description-first">
             
@@ -172,16 +172,20 @@
           </div>
 
           <div class="description-second">
-            <img src="img/logo.png" width="188" height="77" alt="Нижний логотип компании">
-            <b>Since 2004</b>
+              <div class="description-logo"
+                <a href="#">
+                  <img src="img/Logo-description.png"  alt="Нижний логотип компании">
+                </a>
+             </div>
+              <div class="description-year">
+                Since 2004
+              </div>
 
-            <!-- Тут наверно заработались и неправильно разметили: список text-profits - правильно, а вот заголовок "Как мы работаем" нужно заменить на div и убрать список profits"  -->
-            
+                      
               <div class="title-profits">КАК Мы работаем:
               <ul class="text-profits no-list">
-                <!-- Здесь правильно -->
                 <li>C самоотдачей 146%</li>
-                <li>Мобильных приложений для iOS и Android</li>
+                <li>Соблюдая сроки на 100%</li>
                 <li>По предоплате 50%</li>
               </ul>
               </div>          
@@ -220,25 +224,28 @@
         <div class="wrapper-map">  <!-- обои для карты и всего, что на ней находится -->
 
           <div> <!-- место для яндекс карты -->
-            <img src="" width="1080" height="450" alt="Яндекс карта">
+            <img src=""  alt="Яндекс карта">
           </div> 
 
           <div class="wrapper-contact"> <!-- блок для расположения контакта на карте -->
 
-            <div class="title-contact"><!-- название студии на зоголовке -->
+            <div class="title-contact"><!-- название студии на заголовке -->
               <span>
                 <b>Nerds</b>
                 DESIGN STUDIO
               </span>
             </div> 
             <div class="address-contact">
-              <p> 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-              <br>
-              <!-- Убираем br, мы зададим конкретную ширину блоку и слов сами передвинутся -->
-              тел. +7 (812) 275-75-75
-              <!-- телефон делаем ссылкой  <a href="tel: +7 (812) 275-75-75"> +7 (812) 275-75-75 </a> -->
+              <p> 191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
+               <div class="phone-contact">  тел.
+               <a href="tel: +7 (812) 275-75-75">+7 (812) 275-75-75</a> 
+               </div>
+             
               </p>
+              <div class="btn-top">
               <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
+              </div>
+            </div>
             </div>
             <div class="label-contact">
               <img src="img/label-contact.png" width="230" height="249" alt="Иконка на карте">
@@ -247,7 +254,7 @@
               <img src="img/logo-contact.png" width="93" height="39" alt="Логотип на карте">
             </div>
 
-          </div>
+          
 
         </div>
      
