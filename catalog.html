@@ -2,100 +2,122 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style-catalog.css">
+    <link rel="stylesheet" href="css/symbols-nerds.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
   	<!-- определяю место для шапки проекта -->
-  		<header class="main-header"> <!-- часть проекта с серым фоном -->
-  			<div class="container-navigation">  <!-- Долго думала, над проблемой хедера и футера - решила, что большое широкое поле для футера и хэдера ("main-header"), это один класс. Узкое поле которое находится по середине, это будет контейнер, где я загоню, все детальки... просто выравнивать peddingом, я плохо соображаю, а учитывая, что я в сетках и позиционировании вообще туплю, то пусть пока будет так -->
-          		<img src="img/index-logo.png" width="139" height="56" alt="Логотип Нердс">
+  		<header class="main-header"> 
+  			<div class="container clearfix">  
+          <div class="logo-img">
+          		<img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
+          </div>
+
+          <div class="place-symbol">
+                <a class="symbol-bin icon-basket" href="#">Корзина</a>
+          </div> <!-- отдельный блок для Корзины --> 
+
        		
        			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
-           		  <ul>
-           		 	<li>
-              			<a href="#">Студия</a>
-            		</li>
-             		<li>
-             			 <a href="#">Клиенты</a>
-            		</li>
-           			<li>
-              			 <a href="#">Магазин</a>
-            		</li>
-           			<li>
-             			 <a href="#">Контакты</a>
-            		</li>
-            		<li>
-             			 <a href="#">Корзина</a> 
-           			</li>
-          		  </ul>
+           		 <ul class="no-list navigation-menu">
+                  <li>
+                      <a href="#" class="main-navigation-link active">Студия</a>
+                  </li>
+                  <li>
+                      <a href="#" class="main-navigation-link">Клиенты</a>
+                  </li>
+                  <li>
+                      <a href="#" class="main-navigation-link">Магазин</a>
+                  </li>
+                  <li>
+                      <a href="#" class="main-navigation-link">Контакты</a>
+                  </li> 
+              </ul>
+       
         		</nav>
         	</div>
+
+        </header>
+
+        <main>
+
   		 	<div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН
   		 		<br>
 			ГОТОВЫХ МАКЕТОВ
     		</div>  <!-- Вставила этот блок в хєдер, так как он тоже относится к серому участку -->
-    	</header>
+    	
 
     	<div class="main-centre"> <!-- центральный блок на белом фоне, который включает в себя две основные колонки sidebar и portfolio-->
-        <div class="sidebar-choice">
-          <span> Стоимость </span> 
-          <div> </div> <!-- Бегунок, я пропускаю, так как сделав курс по формам, информации о нем не нашла -->
-          <div class="price">
-            <span> Сетка:</span>
-            <label for="minimum-price"> от </label>  <!-- Ира, скажите, а можно же выносить тег input за тег label, вот так как сейчас?  -->
-              <input type="text" id="minimum-price" value="0">
-            <label for="maximum-price"> до </label>   
-              <input type="text" id="maximum-price" value="15000">
-          </div>
-          <div class="radio-button">
-            <label for="radio-adaptive"> 
-               <input type="radio" name="adaptive" id="radio-adaptive" checked>
-               Адаптивная
-            </label> <br>
-            <label for="radio-fix">  
+        <div class="container clearfix"> 
+
+<!-- Блок настройки выбора -->
+          
+          <div class="sidebar-choice">
+              <span> Стоимость </span> 
+              <div> </div> <!-- Бегунок, я пропускаю, так как сделав курс по формам, информации о нем не нашла -->
+              <div class="price">
+                <span> Сетка:</span>
+                <label for="minimum-price"> от </label>  <!-- Ира, скажите, а можно же выносить тег input за тег label, вот так как сейчас?  -->
+                <input type="text" id="minimum-price" value="0">
+                 <label for="maximum-price"> до </label>   
+                <input type="text" id="maximum-price" value="15000">
+              </div>
+
+
+              <div class="radio-button">
+                 <label for="radio-adaptive"> 
+                  <input type="radio" name="adaptive" id="radio-adaptive" checked>
+                Адаптивная
+                   </label> <br>
+                  <label for="radio-fix">  
                <input type="radio" name="fix" id="radio-fix">
                Фиксированная
-            </label> <br>
-            <label for="radio-rubber"> 
+                </label> <br>
+                <label for="radio-rubber"> 
                <input type="radio" name="rubber" id="radio-rubber">
                Резиновая
-            </label>
+              </label>
+              </div>
 
-          </div>
-          <div class="box">
-            <span> Особенности: </span>
-            <br>
-            <label for="slider-box"> 
-              <input type="checkbox" id="slider-box" checked>
-              Слайдер 
-            </label> 
-            <br>
-            <label for="profit-box"> 
-              <input type="checkbox" id="profit-box">
-              Блок преимуществ
-            </label>
-            <br>
-            <label for="news-box"> 
-              <input type="checkbox" id="news-box" checked>
-              Новости
-            </label>
-            <br>
-            <label for="gallery-box"> 
-              <input type="checkbox" id="gallery-box">
-              Галерея
-            </label>
-            <br>
-            <label for="bin-box"> 
-              <input type="checkbox" id="bin-box">
-              Корзина
-            </label> 
-            <br>
-            <label for="button-box">  <!-- Ирина, подскажите, пожалуйста, я не совсем поняла, в проекте это какая кнопка? которая обычная или input -->
-              <input type="submit" id="button-box" value="Показать">
-            </label>
-             
-          </div>
+
+              <div class="box">
+                <span> Особенности: </span>
+                <br>
+                <label for="slider-box"> 
+                  <input type="checkbox" id="slider-box" checked>
+                  Слайдер 
+                </label> 
+                <br>
+                <label for="profit-box"> 
+                  <input type="checkbox" id="profit-box">
+                  Блок преимуществ
+                </label>
+                <br>
+                <label for="news-box"> 
+                  <input type="checkbox" id="news-box" checked>
+                  Новости
+                </label>
+                <br>
+                <label for="gallery-box"> 
+                  <input type="checkbox" id="gallery-box">
+                  Галерея
+                </label>
+                <br>
+                <label for="bin-box"> 
+                  <input type="checkbox" id="bin-box">
+                  Корзина
+                </label> 
+                <br>
+                <label for="button-box">  <!-- Ирина, подскажите, пожалуйста, я не совсем поняла, в проекте это какая кнопка? которая обычная или input -->
+                  <input type="submit" id="button-box" value="Показать">
+                </label>
+              </div>
         </div>
+
+<!-- Блок портфолио -->
+
+
         <div class="portfolio">
           <div class="nav-portfolio">
             <span class="title-portfolio"> Сортировать:
@@ -158,8 +180,100 @@
               
             </ul>
           </div>
-
           
         </div>
     		
     	</div>
+      </div>
+
+
+<!-- Блок карты -->
+
+    <div class="map">
+
+        <div class="container">
+
+        <div class="wrapper-map">  <!-- обои для карты и всего, что на ней находится -->
+
+          <div> <!-- место для яндекс карты -->
+            <img src=""  alt="Яндекс карта">
+          </div> 
+
+          <div class="wrapper-contact"> <!-- блок для расположения контакта на карте -->
+
+            <div class="title-contact"><!-- название студии на заголовке -->
+              <span>
+                <b>Nerds</b>
+                DESIGN STUDIO
+              </span>
+            </div> 
+            <div class="address-contact">
+              <p> 191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
+               <div class="phone-contact">  тел.
+               <a href="tel: +7 (812) 275-75-75">+7 (812) 275-75-75</a> 
+               </div>
+             
+              </p>
+              <div class="btn-top">
+              <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
+              </div>
+            </div>
+            </div>
+            <div class="label-contact">
+              <img src="img/drop.png" width="230" height="249" alt="Иконка на карте">
+            </div>
+            <!-- <div class="logo-contact">
+              <img src="img/logo-contact.png" width="93" height="39" alt="Логотип на карте">
+            </div> -->
+
+          
+
+        </div>
+     
+        </div>      
+    </div>
+    </main>
+
+    <!--  Футер -->
+
+    <footer class="main-footer"> 
+
+    <div class="container">
+      <div class="footer clearfix"> 
+        <div class="socialsite-buttons"> 
+          <!--  ПОРА ПЕРЕДЕЛАТЬ С ИКОНОЧНЫМ ШРИФТОМ ) -->
+          
+              <a href="http://vk.com">
+               <span class="btn-site icon-vk"></span>
+                
+              </a>
+           
+              <a href="https://www.facebook.com">
+               <span class="btn-site icon-facebook"></span>
+              </a>
+            
+              <a href="https://www.instagram.com/"> 
+                <span class="btn-site icon-instagramm"></span> 
+               </a>
+            
+        </div>
+
+        <div class="footer-text">
+          <p class="text-discount">
+          <b>
+          Давайте дружить, это выгодно!
+          </b></p>
+          <span class="sold">
+            Скидка 10% для друзей из социальных сетей.
+          </span>  
+          
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
