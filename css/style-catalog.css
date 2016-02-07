@@ -97,12 +97,35 @@ body {
 	width: 300px;
 }
 
+
+
+
+
+
+
 .portfolio {
 	float: right;
 	width: 580px;
 }
 
+.title-portfolio{
+    display: inline-block;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
 
+.list-nav {
+	display: inline-block;
+    margin: 10px 0 0 10px;
+    padding: 0;}
+
+.alignment {
+	display: inline-block;
+    margin: 0 20px 0;
+    vertical-align: top;
+}
 
 
 
