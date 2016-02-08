@@ -2,14 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style-catalog.css">
+    <!-- ИСПРАВИТЬ: не нужно выносить в отдельный стелевой файл стили для страницы каталога, если боитесь запутаться, просто отделите  комментариями стили которые для страницы каталога -->
+    <link rel="stylesheet" href="css/style.css">
+    
     <link rel="stylesheet" href="css/symbols-nerds.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
   	<!-- определяю место для шапки проекта -->
   		<header class="main-header"> 
-  			<div class="container clearfix">  
+
+  			<div class="container clearfix">
+
           <div class="logo-img">
           		<img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
           </div>
@@ -19,71 +23,85 @@
           </div> <!-- отдельный блок для Корзины --> 
 
        		
-       			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
-           		 <ul class="no-list navigation-menu">
-                  <li>
-                      <a href="#" class="main-navigation-link active">Студия</a>
-                  </li>
-                  <li>
-                      <a href="#" class="main-navigation-link">Клиенты</a>
-                  </li>
-                  <li>
-                      <a href="#" class="main-navigation-link">Магазин</a>
-                  </li>
-                  <li>
-                      <a href="#" class="main-navigation-link">Контакты</a>
-                  </li> 
-              </ul>
-       
-        		</nav>
-        	</div>
+     			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
+         		 <ul class="no-list navigation-menu">
+                <li>
+                    <a href="#" class="main-navigation-link active">Студия</a>
+                </li>
+                <li>
+                    <a href="#" class="main-navigation-link">Клиенты</a>
+                </li>
+                <li>
+                    <a href="#" class="main-navigation-link">Магазин</a>
+                </li>
+                <li>
+                    <a href="#" class="main-navigation-link">Контакты</a>
+                </li> 
+            </ul>
+      		</nav>
 
-        </header>
+        </div>
 
-        <main>
+      </header>
 
-  		 	<div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН
-  		 		<br>
-			ГОТОВЫХ МАКЕТОВ
-    		</div>  <!-- Вставила этот блок в хєдер, так как он тоже относится к серому участку -->
-    	
+     
+      <!--  этот блок такой же как и слайдер на странице index, нужно задать сначала блок на всю ширину потом блок с классом container (для центрирования), а потом уже div с классом invitation  - я сделала
+
+       ИСПРАВИТЬ:
+       классу catalog-welcome нужно задать цвет фона - серый. На  этом примере вы можете увидеть то, о чем мы с вами говорили. Почему мы задаем сначала блок у которого ширина 100% окна браузера и класс container ,который центрирует содержимое. 
+       задать ширину в этом классе так, чтобы текст перенесся как в макете. br убрать   -->
+
+      <div class="catalog-welcome">
+        <div class="container">
+          <div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН<br>ГОТОВЫХ МАКЕТОВ</div>  
+        </div>
+      </div>
+	
+     
+      <!-- ОБРАТИТЬ ВНИМАНИЕ: здесь по аналогии с первой страницей должен быть тег main, на этой странице я его перенесла, на index.html тоже-->
+    <main>  
 
     	<div class="main-centre"> <!-- центральный блок на белом фоне, который включает в себя две основные колонки sidebar и portfolio-->
+
         <div class="container clearfix"> 
 
-<!-- Блок настройки выбора -->
+          <!-- Блок настройки выбора -->
           
           <div class="sidebar-choice">
+
               <span> Стоимость </span> 
-              <div> </div> <!-- Бегунок, я пропускаю, так как сделав курс по формам, информации о нем не нашла -->
+              <!--<div> </div>  Бегунок, я пропускаю, так как сделав курс по формам, информации о нем не нашла -->
+
               <div class="price">
                 <span> Сетка:</span>
                 <label for="minimum-price"> от </label>  <!-- Ира, скажите, а можно же выносить тег input за тег label, вот так как сейчас?  -->
                 <input type="text" id="minimum-price" value="0">
-                 <label for="maximum-price"> до </label>   
+                <label for="maximum-price"> до </label>   
                 <input type="text" id="maximum-price" value="15000">
               </div>
 
 
               <div class="radio-button">
-                 <label for="radio-adaptive"> 
+                <label for="radio-adaptive"> 
                   <input type="radio" name="adaptive" id="radio-adaptive" checked>
-                Адаптивная
-                   </label> <br>
-                  <label for="radio-fix">  
-               <input type="radio" name="fix" id="radio-fix">
-               Фиксированная
+                  Адаптивная
+                </label> <br>
+                <label for="radio-fix">  
+                  <input type="radio" name="fix" id="radio-fix">
+                  Фиксированная
                 </label> <br>
                 <label for="radio-rubber"> 
-               <input type="radio" name="rubber" id="radio-rubber">
-               Резиновая
-              </label>
+                  <input type="radio" name="rubber" id="radio-rubber">
+                  Резиновая
+                </label>
               </div>
 
 
               <div class="box">
                 <span> Особенности: </span>
+                <!-- ИСПРАВИТЬ: br убираем, и никогда не используем для таких переносов. Убрать здесь и далее в этом блоке -->
                 <br>
+
                 <label for="slider-box"> 
                   <input type="checkbox" id="slider-box" checked>
                   Слайдер 
@@ -113,81 +131,103 @@
                   <input type="submit" id="button-box" value="Показать">
                 </label>
               </div>
-        </div>
 
-<!-- Блок портфолио -->
-
-
-        <div class="portfolio">
-          <div class="nav-portfolio">
-            <span class="title-portfolio"> Сортировать:
-              
-            </span>
-            <ul class="list-nav no-list"> 
-              <li class="alignment">
-                По цене
-              </li>
-               <li class="alignment">
-                По типу
-              </li>
-               <li class="alignment">
-                По функционалу
-              </li>
-              
-            </ul> <!-- Дальше идут хитрые стрелочки -->
-            
           </div>
-          <div class="wrapper-images">
-            <ul class="list-images">
-              <li>
-                <a href="#">
-                  <img src="img/site-aviator.png" alt="Сайт Авиатор">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/site-sindy.png" alt="Сайт Песок">
-                </a>
-                <div class="about-site">
-                  <div class="about-name"> Sunset
-                  </div>
-                  <div class="about-discribe">
-                    Интернет-магазин с личным кабинетом
-                  
-                  <a class="button-about" href="#"> 10000 P. </div>
-                  
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/site-forte.png" alt="Сайт Форте">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/site-organic.png" alt="Сайт Органик">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/site-avenue.png" alt="Сайт Аvenue">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/site-dovetail.png" width="239" height="240" alt="Сайт Dovetail">
-                </a>
-              </li>
-              
-            </ul>
+
+          <!-- Блок портфолио -->
+
+          <div class="portfolio">
+
+            <div class="nav-portfolio">
+              <span class="title-portfolio"> Сортировать:</span>
+
+              <ul class="list-nav no-list"> 
+                <li class="alignment">
+                  <!-- ИСПРАВИТЬ: эти элементы должны быть ссылками, так как для них потом нужно прописать стили состояний - при наведении 
+                  <a href="#" >По цене</a>
+                  -->
+                  По цене
+                </li>
+                 <li class="alignment">
+                  По типу
+                </li>
+                 <li class="alignment">
+                  По функционалу
+                </li>
+                
+              </ul> <!-- Дальше идут хитрые стрелочки --> 
+            </div>
+
+            <div class="wrapper-images">
+
+              <!-- ИСПРАВИТЬ: для того чтобы блоки встали как в макете, задайте свойство display:inline-block для элементов li, а также задайте им ширину, высоту, margin и position: relative;
+              списку добавить класс no-list -->
+              <ul class="list-images no-list">
+                <li>
+                  <a href="#">
+                    <img src="img/site-aviator.png" alt="Сайт Авиатор">
+                  </a>
+                </li>
+
+                <!-- ИСПРАВИТЬ: такие же блоки about-site нужно продублировать в каждом li. Это есть в макете - там для каждого блока будут свои названия и цены -->
+                <li>
+                  <a href="#">
+                    <img src="img/site-sindy.png" alt="Сайт Песок">
+                  </a>
+                  <!-- ОБРАТИТЬ ВНИМАНИЕ: в этом блоке у вас не хватало одного закрывающего тега </div>,   после "Интернет-магазин с личным кабинетом", я добавила -->
+                  <div class="about-site">
+                    <div class="about-name"> Sunset
+                    </div>
+                    <div class="about-discribe">
+                      Интернет-магазин с личным кабинетом
+                    </div>
+                    <a class="button-about" href="#"> 10000 P. 
+                  </div>  
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img src="img/site-forte.png" alt="Сайт Форте">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/site-organic.png" alt="Сайт Органик">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/site-avenue.png" alt="Сайт Аvenue">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/site-dovetail.png" width="239" height="240" alt="Сайт Dovetail">
+                  </a>
+                </li>
+                
+              </ul>
+            </div> 
+
+
+           <!--JОБРАТИТЬ ВНИМАНИЕ И ДОДЕЛАТЬ: сюда нужно добавить блок пагинациц, классы можете переименовать-->
+          <div class="catalog-pagination-items">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Следующая</a>
           </div>
-          
-        </div>
+
+
+          </div>
     		
-    	</div>
+  	    </div>
+
       </div>
 
+    </main>
 
-<!-- Блок карты -->
+    <!-- Блок карты -->
 
     <div class="map">
 
@@ -232,8 +272,7 @@
      
         </div>      
     </div>
-    </main>
-
+    
     <!--  Футер -->
 
     <footer class="main-footer"> 

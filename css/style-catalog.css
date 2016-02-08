@@ -127,7 +127,11 @@ body {
     vertical-align: top;
 }
 
-
+.list-images li {
+	display: inline-block;
+	vertical-align: top;
+	
+}
 
 /*Разметка блока карты*/
 

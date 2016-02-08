@@ -577,21 +577,59 @@ width: 240px;
 
 
    
+   /*Описание классов для Каталога*/
+
+
+.invitation {
+    background: #eee;
+    font-size: 40px;
+    
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 0 90px 0;
+}
+
+.sidebar-choice{
+	float: left;
+	width: 300px;
+}
 
 
 
-/*
-1. для socialsite-buttons задать ширину и float: left; 
-тогда блок прилепится к левой части родительского элемента
-2. для footer-text задать также ширину и float: right;
-3. к классу footer добавить класс clearfix - помним, что при использовании флоатов, 
-этот класс обязательно использовать для родительского класса этих float-элементов.
-Элементы, которым задано свойства float имеют особенность выпадать из потока. 
-и вот Так называемая "распорка" позволяет блоку в котором лежат float-элементы "быть равной высоте этих элементов".
-В курсах академии про это есть  https://htmlacademy.ru/courses/65/run/10  до  https://htmlacademy.ru/courses/65/run/16
-4. Социальные кнопки сделать просто ссылками с применением иконочных шрифтов.
-*/
 
+
+
+
+.portfolio {
+	float: right;
+	width: 580px;
+}
+
+.title-portfolio{
+    display: inline-block;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.list-nav {
+	display: inline-block;
+    margin: 10px 0 0 10px;
+    padding: 0;}
+
+.alignment {
+	display: inline-block;
+    margin: 0 20px 0;
+    vertical-align: top;
+}
+
+.list-images li {
+	display: inline-block;
+	vertical-align: top;
+	
+}
 
 
 
