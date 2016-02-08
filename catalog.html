@@ -2,9 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <!-- ИСПРАВИТЬ: не нужно выносить в отдельный стелевой файл стили для страницы каталога, если боитесь запутаться, просто отделите  комментариями стили которые для страницы каталога -->
     <link rel="stylesheet" href="css/style.css">
-    
     <link rel="stylesheet" href="css/symbols-nerds.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
@@ -26,13 +24,13 @@
      			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
          		 <ul class="no-list navigation-menu">
                 <li>
-                    <a href="#" class="main-navigation-link active">Студия</a>
+                    <a href="#" class="main-navigation-link ">Студия</a>
                 </li>
                 <li>
                     <a href="#" class="main-navigation-link">Клиенты</a>
                 </li>
                 <li>
-                    <a href="#" class="main-navigation-link">Магазин</a>
+                    <a href="#" class="main-navigation-link active">Магазин</a>
                 </li>
                 <li>
                     <a href="#" class="main-navigation-link">Контакты</a>
@@ -45,23 +43,20 @@
       </header>
 
      
-      <!--  этот блок такой же как и слайдер на странице index, нужно задать сначала блок на всю ширину потом блок с классом container (для центрирования), а потом уже div с классом invitation  - я сделала
-
-       ИСПРАВИТЬ:
-       классу catalog-welcome нужно задать цвет фона - серый. На  этом примере вы можете увидеть то, о чем мы с вами говорили. Почему мы задаем сначала блок у которого ширина 100% окна браузера и класс container ,который центрирует содержимое. 
-       задать ширину в этом классе так, чтобы текст перенесся как в макете. br убрать   -->
+     
 
       <div class="catalog-welcome">
         <div class="container">
-          <div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН<br>ГОТОВЫХ МАКЕТОВ</div>  
+          <div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН
+            ГОТОВЫХ МАКЕТОВ</div>  
         </div>
       </div>
 	
      
-      <!-- ОБРАТИТЬ ВНИМАНИЕ: здесь по аналогии с первой страницей должен быть тег main, на этой странице я его перенесла, на index.html тоже-->
+      
     <main>  
 
-    	<div class="main-centre"> <!-- центральный блок на белом фоне, который включает в себя две основные колонки sidebar и portfolio-->
+    	<div class="main-centre"> <!-- центральный блок на белом фоне, который включает в себя две основные колонки sidebar и projects-->
 
         <div class="container clearfix"> 
 
@@ -69,16 +64,47 @@
           
           <div class="sidebar-choice">
 
-              <span> Стоимость </span> 
-              <!--<div> </div>  Бегунок, я пропускаю, так как сделав курс по формам, информации о нем не нашла -->
+           <fieldset class="price-filter"> 
+                  <legend>Стоимость:</legend> 
+                  <div class="range-filter"> 
+                  <div class="range-controls"> 
+                  <div class="scale">
+                    <div style="margin-left: 0; width:100px;" class="bar">
+                      
+                    </div>
+                  </div> 
+                  <div class="toggle min-toggle"></div> 
+                  <div class="toggle max-toggle" style="margin-right: 100px;"></div> 
+                  </div> 
+                  <div class="price-controls clearfix"> 
+                  <label for="min-price" class="for-min-price">от<input class="min-price" type="text" value="0" id="min-price"></label> 
+                  <label for="max-price" class="for-max-price">до<input class="max-price" type="text" value="15 000" id="max-price"></label> 
+                  </div> 
+                  </div> 
+                  </fieldset>
 
-              <div class="price">
+
+
+
+
+
+
+
+            <!--   <div class="price">
                 <span> Сетка:</span>
-                <label for="minimum-price"> от </label>  <!-- Ира, скажите, а можно же выносить тег input за тег label, вот так как сейчас?  -->
+                <label for="minimum-price"> от </label>  
                 <input type="text" id="minimum-price" value="0">
                 <label for="maximum-price"> до </label>   
                 <input type="text" id="maximum-price" value="15000">
-              </div>
+              </div> -->
+
+
+
+
+
+
+
+
 
 
               <div class="radio-button">
@@ -100,33 +126,33 @@
               <div class="box">
                 <span> Особенности: </span>
                 <!-- ИСПРАВИТЬ: br убираем, и никогда не используем для таких переносов. Убрать здесь и далее в этом блоке -->
-                <br>
+                
 
                 <label for="slider-box"> 
                   <input type="checkbox" id="slider-box" checked>
                   Слайдер 
                 </label> 
-                <br>
+                
                 <label for="profit-box"> 
                   <input type="checkbox" id="profit-box">
                   Блок преимуществ
                 </label>
-                <br>
+                
                 <label for="news-box"> 
                   <input type="checkbox" id="news-box" checked>
                   Новости
                 </label>
-                <br>
+                
                 <label for="gallery-box"> 
                   <input type="checkbox" id="gallery-box">
                   Галерея
                 </label>
-                <br>
+                
                 <label for="bin-box"> 
                   <input type="checkbox" id="bin-box">
                   Корзина
                 </label> 
-                <br>
+                
                 <label for="button-box">  <!-- Ирина, подскажите, пожалуйста, я не совсем поняла, в проекте это какая кнопка? которая обычная или input -->
                   <input type="submit" id="button-box" value="Показать">
                 </label>
@@ -134,25 +160,25 @@
 
           </div>
 
-          <!-- Блок портфолио -->
+          <!-- Блок проектов -->
+          
+          
+          <div class="projects">
 
-          <div class="portfolio">
+            <div class="nav-projects">
+              <span class="title-projects"> Сортировать:</span>
 
-            <div class="nav-portfolio">
-              <span class="title-portfolio"> Сортировать:</span>
-
-              <ul class="list-nav no-list"> 
+              <ul class="filter-list no-list"> 
                 <li class="alignment">
-                  <!-- ИСПРАВИТЬ: эти элементы должны быть ссылками, так как для них потом нужно прописать стили состояний - при наведении 
+                 
                   <a href="#" >По цене</a>
-                  -->
-                  По цене
+                  
+                 </li>
+                 <li class="alignment">
+                  <a href="#" > По типу</a>
                 </li>
                  <li class="alignment">
-                  По типу
-                </li>
-                 <li class="alignment">
-                  По функционалу
+                  <a href="#" > По функционалу</a>
                 </li>
                 
               </ul> <!-- Дальше идут хитрые стрелочки --> 

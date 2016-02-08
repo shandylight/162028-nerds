@@ -34,8 +34,6 @@ body {
 	width: 140px;
 }
 
-
-
 .main-navigation  {
 	float: right;
 	margin-top: 41px;
@@ -45,9 +43,8 @@ body {
 }
 
 .navigation-menu .active{
-    border-bottom: 2px solid #FB565A;
+  border-bottom: 2px solid #FB565A;
 }
-
 
 .main-navigation ul {
 	display: inline-block;
@@ -146,9 +143,9 @@ display:none
 }
 .btn { 
 	background: #fb565a;
-    margin-top: 18px;
-    padding: 0 70px;
-}
+	margin-top: 18px;
+	padding: 0 70px;
+	}
 
 .btn-slide {
 	border-radius:2px;
@@ -158,9 +155,8 @@ display:none
 	display: inline-block;
 	height: 38px;
 	text-decoration: none;
-    text-align: center;
-    vertical-align: top;
-	
+  text-align: center;
+  vertical-align: top;
 }
 
 .image-item {
@@ -182,82 +178,75 @@ display:none
 первого li, повторите для двух других)
 */
 
-.main-centre{
+.main-centre {
 	padding-top: 75px;
 	padding-bottom: 75px;
 }
-
 
 .block-columns {
 	margin-left: -38px;
 	margin-right: -38px;
 }
+
 .bk {
 	display: inline-block;
 	width: 240px;
 	vertical-align: top;
 	margin-left: 38px;
 	margin-right: 38px;
-
-
 }
 
 h2 {
 	font-size: 18px;
 	line-height: 30px;
 	text-transform: uppercase;
-	
-
-
 }
 
 .block-columns p {
 	font-size: 15px;
 	line-height: 22px;
-	
-
 }
 
 .btn-red {
-    background: #fb565a;
+  background: #fb565a;
 }
 .btn-red:hover {
-    background: #d6494d;
+  background: #d6494d;
 }
 .btn-red:active {
-    background: #b63538;
+  background: #b63538;
 }
 .btn-green {
-    background: #00ca74;
+  background: #00ca74;
 }
 .btn-green:hover {
-    background: #01a25e;
+  background: #01a25e;
 }
 .btn-green:active {
-    background: #009053;
+  background: #009053;
 }
 .btn-yellow {
-    background: #efc84a;
+  background: #efc84a;
 }
 .btn-yellow:hover {
-    background: #d6ae2c;
+  background: #d6ae2c;
 }
 .btn-yellow:active {
-    background: #c09b24;
+  background: #c09b24;
 }
 
 .btn-columns {
-border-radius: 2px;
-font-size: 12px;
-color: #fff;
-display: inline-block;
-padding: 0 38px;
-line-height: 38px;
-height: 38px;
-text-transform: uppercase;
-text-decoration: none;
-text-align: center;
-vertical-align: top;
+	border-radius: 2px;
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	padding: 0 38px;
+	line-height: 38px;
+	height: 38px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: top;
 }
 
 
@@ -271,19 +260,18 @@ vertical-align: top;
 */
 
 .description {
-color: #181818;
-font-size: 16px;
-font-weight: 300;
-line-height: 22px;
-padding: 70px 0 45px 0;
-border-bottom: 2px solid #eee;
+	color: #181818;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 70px 0 45px 0;
+	border-bottom: 2px solid #eee;
 }
 
 .description-first{
-float: left;
-width: 580px;
+	float: left;
+	width: 580px;
 }
-
 
 .description-slogan{
  font-size: 36px;
@@ -291,107 +279,110 @@ width: 580px;
  line-height: 36px;
  padding-bottom: 5px;
 }
+
 .title-orders {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    margin: 44px 0 0 0;
-    text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+	margin: 44px 0 0 0;
+	text-transform: uppercase;
 }
 .text-orders {
-    margin: 21px 0 0 0;
+  margin: 21px 0 0 0;
 }
+
 .text-orders li {
-padding: 0 0 23px 35px;
-position: relative;
+	padding: 0 0 23px 35px;
+	position: relative;
 }
 
 .text-orders li:before {
-    border: 1px solid #fb565a;
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 25px;
+	border: 1px solid #fb565a;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 12px;
+	width: 25px;
 }
 
 .description-second{
-float: right;
-width: 240px;
+	float: right;
+	width: 240px;
 }
 
 .description-logo {
-	
-    text-align: center;
+  text-align: center;
 }
 
 .description-year {
 	margin-top: 20px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .description-year:before {
-    left: -10px;
+  left: -10px;
 }
 .description-year:after{
 	right: 10px;
 }
 
 .description-year:before, .description-year:after{
-    background: #eee;
-    content: '';
-    top: 10px;
-    height: 2px;
-    position: absolute;
-    margin: 0 0 0 12px;
-    width: 55px;
-
+  background: #eee;
+  content: '';
+  top: 10px;
+  height: 2px;
+  position: absolute;
+  margin: 0 0 0 12px;
+  width: 55px;
 }
 
 .title-profits {
 	font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    margin: 55px 0 0 0;
-    text-transform: uppercase;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 55px 0 0 0;
+  text-transform: uppercase;
 }
 
 .text-profits{
-    padding: 0;
-    list-style: none;
-    margin: 21px 0 0 0;
+  padding: 0;
+  list-style: none;
+  margin: 21px 0 0 0;
 }
 
 .text-profits li {
-	
-    padding: 0 0 23px 35px;
-    position: relative;
-    font-size: 16px;
-    
-
+  padding: 0 0 23px 35px;
+  position: relative;
+  font-size: 16px;
 }
+
 .text-profits li:before {
-    border: 1px solid #fb565a;
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 25px;
-   }
-
-   .portfolio {
-    border-bottom: 2px solid #eee;
-    margin: 0;
-    padding: 40px 20px 10px;
+	border: 1px solid #fb565a;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 12px;
+	width: 25px;
 }
+
+
+
+
+
+.portfolio {
+	border-bottom: 2px solid #eee;
+	margin: 0;
+	padding: 40px 20px 10px;
+}
+
 .portfolio-items li {
 	display: inline-block;
-    margin: 0 30px;
-    text-align: center;
-    vertical-align: middle;
-    width: 209px;
+	margin: 0 30px;
+	text-align: center;
+	vertical-align: middle;
+	width: 209px;
 }
 
 .portfolio-items a{
@@ -451,23 +442,23 @@ width: 240px;
 	top: 90px;
 	left: 160px;
 	background: #fff;
-    color: #666;
-    padding: 32px 24px;
-    width: 202px;
+	color: #666;
+	padding: 32px 24px;
+	width: 202px;
 }
 
 .title-contact{
 	font-size: 16px;
-    line-height: 30px;
-    font-weight: 300;
-    text-transform: uppercase;
+	line-height: 30px;
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
 .address-contact{
 	font-size: 16px;
-    line-height: 20px;
-    font-weight: 300;
-    margin: 12px 0;
+	line-height: 20px;
+	font-weight: 300;
+	margin: 12px 0;
 }
 
 .phone-contact a{
@@ -476,26 +467,23 @@ width: 240px;
 }
 
 .btn-top {
-	 margin-top: 38px;
-	 text-align: center;
+	margin-top: 38px;
+	text-align: center;
 
 }
 .btn-contact {
 	background: #fb565a;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 18px;
-    width: 160px;
-	
-   
-    padding: 15px 50px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-
+	border-radius: 3px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 18px;
+	width: 160px;
+	padding: 15px 50px;
+	text-decoration: none;
+	text-transform: uppercase;
 } 
+
 .btn-contact:hover {
 	background:#d6494d;
 }
@@ -518,25 +506,22 @@ width: 240px;
 	float: left;
 	width: 320px;
 }
-.socialsite-buttons a{
-	
-	background: #e1e1e1;
-    border-radius: 50%;
-    display: inline-block; 
-    margin: 5px 10px;
-    padding: 5px;
-    text-align: center;
-    width: 60px;
-    height: 60px;
-   
 
+.socialsite-buttons a{
+	background: #e1e1e1;
+	border-radius: 50%;
+	display: inline-block; 
+	margin: 5px 10px;
+	padding: 5px;
+	text-align: center;
+	width: 60px;
+	height: 60px;
 }
 
 .btn-site {
 	display: inline-block;
     vertical-align: middle;
 }
-
 
 .footer {
 	padding-top: 75px;
@@ -568,45 +553,43 @@ width: 240px;
     line-height: 36px;
     font-weight: 300;     /*Откуда здесь взялся марджин 36????*/
 }
+
 .sold {
 	font-size: 16px;
-    font-weight: 500;
-
-
+  font-weight: 500;
 }
 
 
    
+
    /*Описание классов для Каталога*/
 
-
-.invitation {
-    background: #eee;
-    font-size: 40px;
-    
-    font-weight: 200;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 0 90px 0;
+.catalog-welcome {
+	background: #eee;	
+	padding-top: 60px;
 }
 
-.sidebar-choice{
+.invitation {
+  background: #eee;
+  font-size: 40px;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 0 90px 0;
+}
+
+.sidebar-choice {
 	float: left;
 	width: 300px;
 }
 
 
-
-
-
-
-
-.portfolio {
+.projects {
 	float: right;
 	width: 580px;
 }
 
-.title-portfolio{
+.title-projects {
     display: inline-block;
     font-weight: 500;
     margin: 0;
@@ -614,7 +597,7 @@ width: 240px;
     vertical-align: middle;
 }
 
-.list-nav {
+.filter-list  {
 	display: inline-block;
     margin: 10px 0 0 10px;
     padding: 0;}
@@ -628,7 +611,6 @@ width: 240px;
 .list-images li {
 	display: inline-block;
 	vertical-align: top;
-	
 }
 
 
