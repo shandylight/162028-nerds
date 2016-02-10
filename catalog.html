@@ -1,375 +1,297 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/symbols-nerds.css">
-    <title>HTML Academy: Нёрдс</title>
-  </head>
-  <body>
-  	<!-- определяю место для шапки проекта -->
-  		<header class="main-header"> 
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/symbols-nerds.css">
+  <title>HTML Academy: Нёрдс</title>
+</head>
+<body>
 
-  			<div class="container clearfix">
-
-          <div class="logo-img">
-          		<img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
-          </div>
-
-          <div class="place-symbol">
-                <a class="symbol-bin icon-basket" href="#">Корзина</a>
-          </div> <!-- отдельный блок для Корзины --> 
-
-       		
-     			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
-         		 <ul class="no-list navigation-menu">
-                <li>
-                    <a href="#" class="main-navigation-link ">Студия</a>
-                </li>
-                <li>
-                    <a href="#" class="main-navigation-link">Клиенты</a>
-                </li>
-                <li>
-                    <a href="#" class="main-navigation-link active">Магазин</a>
-                </li>
-                <li>
-                    <a href="#" class="main-navigation-link">Контакты</a>
-                </li> 
-            </ul>
-      		</nav>
-
-        </div>
-
-      </header>
-
-     
-     
-
-      <div class="catalog-welcome">
-        <div class="container">
-          <div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН
-            ГОТОВЫХ МАКЕТОВ</div>  
-        </div>
+  <header class="main-header"> 
+  	<div class="container clearfix">
+      <div class="logo-img">
+      		<img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
       </div>
-	
-     
-      
-    <main>  
+      <div class="place-symbol">
+            <a class="symbol-bin icon-basket" href="#">Корзина</a>
+      </div> <!-- отдельный блок для Корзины -->     		
+  			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
+     		 <ul class="no-list navigation-menu">
+            <li>
+                <a href="#" class="main-navigation-link ">Студия</a>
+            </li>
+            <li>
+                <a href="#" class="main-navigation-link">Клиенты</a>
+            </li>
+            <li>
+                <a href="#" class="main-navigation-link active">Магазин</a>
+            </li>
+            <li>
+                <a href="#" class="main-navigation-link">Контакты</a>
+            </li> 
+        </ul>
+  		</nav>
+    </div>
+  </header>
 
-    	<div class="main-centre"> <!-- центральный блок на белом фоне, который включает в себя две основные колонки sidebar и projects-->
+  <div class="catalog-welcome">
+    <div class="container">
+      <div class="invitation"> ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</div>  
+    </div>
+  </div>
 
-        <div class="container clearfix"> 
+  <main>  
 
-          <!-- Блок настройки выбора -->
-          
-          <div class="sidebar-choice">
+  	<div class="main-centre"> <!-- центральный блок на белом фоне, который включает в себя две основные колонки sidebar и projects-->
 
-            <form action="form.php" method="GET">
+      <div class="container clearfix"> 
+
+        <!-- Блок настройки выбора -->
+        
+        <div class="sidebar-choice">
+
+          <form>
+
+             <form action="form.php" method="GET">
+              <legend>Стоимость:</legend>
                 <div class="range-filter">
                   <div class="range-controls">
-                      <div class="scale">
-                        <div class="bar">
-                          
-                        </div>
-                      </div>
+                    <div class="scale">
+                      <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
                   </div>
-                
+                  <div class="price-controls">
+                    <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                    <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
 
-                <div class="price-controls">
-
+                  </div>
                 </div>
-              </div>
 
 
+            <fieldset class="filter-layout">
 
+              <legend> Сетка: </legend>
 
+                <!-- !! ОБРАТИТЬ ВНИМАНИЕ, прочитать про input. Атрибуте name у radio должен иметь одинаковое значение -->
+                <input type="radio" name="layout" id="radio-adaptive" class="filter-field" checked>
+                <label for="radio-adaptive">Адаптивная</label>
 
+                <input type="radio" name="layout" id="radio-fix" class="filter-field">
+                <label for="radio-fix">Фиксированная</label>
 
+                <input type="radio" name="layout" id="radio-responsive" class="filter-field">
+                <label for="radio-responsive">Резиновая</label>
 
+            </fieldset>
 
-           <!-- <fieldset class="price-filter"> 
-                  <legend>Стоимость:</legend> 
-                  <div class="range-filter"> 
-                  <div class="range-controls"> 
-                  <div class="scale">
-                    <div style="margin-left: 0; width:100px;" class="bar">
-                      
-                    </div>
-                  </div> 
-                  <div class="toggle min-toggle"></div> 
-                  <div class="toggle max-toggle" style="margin-right: 100px;"></div> 
-                  </div> 
-                  <div class="price-controls clearfix"> 
-                  <label for="min-price" class="for-min-price">от<input class="min-price" type="text" value="0" id="min-price"></label> 
-                  <label for="max-price" class="for-max-price">до<input class="max-price" type="text" value="15 000" id="max-price"></label> 
-                  </div> 
-                  </div> 
-                  </fieldset>
- -->
+           
+            <fieldset class="filter-features">
 
+              <legend> Особенности: </legend>
 
+              <input type="checkbox" id="slider-box" class="filter-field" checked>
+              <label for="slider-box">Слайдер</label> 
+              
+              <input type="checkbox" id="profit-box" class="filter-field">
+              <label for="profit-box">Блок преимуществ</label>
+              
+              <input type="checkbox" id="news-box" class="filter-field" checked>
+              <label for="news-box">Новости</label>
+              
+              <input type="checkbox" id="gallery-box" class="filter-field">
+              <label for="gallery-box">Галерея</label>
+              
+              <input type="checkbox" id="bin-box" class="filter-field"> 
+              <label for="bin-box">Корзина</label>
+              
 
+              <button type="button" class="filter-btn">Показать</button>
 
+            </fieldset>
 
-
-
-            <!--   <div class="price">
-                <span> Сетка:</span>
-                <label for="minimum-price"> от </label>  
-                <input type="text" id="minimum-price" value="0">
-                <label for="maximum-price"> до </label>   
-                <input type="text" id="maximum-price" value="15000">
-              </div> -->
-
-
-
-
-
-
-
-
-
-
-              <div class="radio-button">
-                <label for="radio-adaptive"> 
-                  <input type="radio" name="adaptive" id="radio-adaptive" checked>
-                  Адаптивная
-                </label> <br>
-                <label for="radio-fix">  
-                  <input type="radio" name="fix" id="radio-fix">
-                  Фиксированная
-                </label> <br>
-                <label for="radio-rubber"> 
-                  <input type="radio" name="rubber" id="radio-rubber">
-                  Резиновая
-                </label>
-              </div>
-
-
-              <div class="box">
-                <span> Особенности: </span>
-                <!-- ИСПРАВИТЬ: br убираем, и никогда не используем для таких переносов. Убрать здесь и далее в этом блоке -->
-                
-
-                <label for="slider-box"> 
-                  <input type="checkbox" id="slider-box" checked>
-                  Слайдер 
-                </label> 
-                
-                <label for="profit-box"> 
-                  <input type="checkbox" id="profit-box">
-                  Блок преимуществ
-                </label>
-                
-                <label for="news-box"> 
-                  <input type="checkbox" id="news-box" checked>
-                  Новости
-                </label>
-                
-                <label for="gallery-box"> 
-                  <input type="checkbox" id="gallery-box">
-                  Галерея
-                </label>
-                
-                <label for="bin-box"> 
-                  <input type="checkbox" id="bin-box">
-                  Корзина
-                </label> 
-                
-                <label for="button-box">  <!-- Ирина, подскажите, пожалуйста, я не совсем поняла, в проекте это какая кнопка? которая обычная или input -->
-                  <input type="submit" id="button-box" value="Показать">
-                </label>
-              </div>
-
-          </div>
-
-          <!-- Блок проектов -->
-          
-          
-          <div class="projects ">
-
-            <div class="nav-projects">
-              <span class="title-projects"> Сортировать:</span>
-
-              <ul class="filter-list no-list"> 
-                <li class="filter-list-item">
-                 
-                  <a href="#" >По цене</a>
-                  
-                 </li>
-                 <li class="filter-list-item">
-                  <a href="#" > По типу</a>
-                </li>
-                 <li class="filter-list-item">
-                  <a href="#" > По функционалу</a>
-                </li>
-                
-              </ul> <!-- Дальше идут хитрые стрелочки --> 
-            </div>
-
-            <div class="wrapper-images">
-
-              <!-- ИСПРАВИТЬ: для того чтобы блоки встали как в макете, задайте свойство display:inline-block для элементов li, а также задайте им ширину, высоту, margin и position: relative;
-              списку добавить класс no-list -->
-              <ul class="list-images no-list">
-                <li>
-                  <a href="#">
-                    <img src="img/site-aviator.png" alt="Сайт Авиатор">
-                  </a>
-                  <div class="about-site">
-                    <div class="about-name"> AVIATOR
-                    </div>
-                    <div class="about-discribe">
-                      Одностраничный макет с авторским дизайном
-                    </div>
-                    <a class="button-about" href="#"> 8000 P. </a>
-                  </div> 
-                </li>
-
-                <!-- ИСПРАВИТЬ: такие же блоки about-site нужно продублировать в каждом li. Это есть в макете - там для каждого блока будут свои названия и цены -->
-                <li>
-                  <a href="#">
-                    <img src="img/site-sindy.png" alt="Сайт Песок">
-                  </a>
-                  <!-- ОБРАТИТЬ ВНИМАНИЕ: в этом блоке у вас не хватало одного закрывающего тега </div>,   после "Интернет-магазин с личным кабинетом", я добавила -->
-                  <div class="about-site">
-                    <div class="about-name"> Sunset
-                    </div>
-                    <div class="about-discribe">
-                      Интернет-магазин с личным кабинетом
-                    </div>
-                    <a class="button-about" href="#"> 10000 P. </a>
-                  </div>  
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img src="img/site-forte.png" alt="Сайт Форте">
-                  </a>
-                  <div class="about-site">
-                    <div class="about-name"> FORTE
-                    </div>
-                    <div class="about-discribe">
-                      Отличный макет для личного блога
-                    </div>
-                    <a class="button-about" href="#"> 5000 P. </a>
-                  </div> 
-                </li>
-
-
-                <li>
-                  <a href="#">
-                    <img src="img/site-organic.png" alt="Сайт Органик">
-                  </a>
-                  <div class="about-site">
-                    <div class="about-name"> Modern Organic THAI
-                    </div>
-                    <div class="about-discribe">
-                      Сайт для ресторана быстрого питания
-                    </div>
-                    <a class="button-about" href="#"> 12000 P. </a>
-                  </div> 
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img src="img/site-avenue.png" alt="Сайт Аvenue">
-                  </a>
-                  <div class="about-site">
-                    <div class="about-name"> AVENUE
-                    </div>
-                    <div class="about-discribe">
-                      Макет для блога  о путешествиях
-                    </div>
-                    <a class="button-about" href="#"> 8000 P. </a>
-                  </div> 
-                  </li>
-
-                <li>
-                  <a href="#">
-                    <img src="img/site-dovetail.png" width="239" height="240" alt="Сайт Dovetail">
-                  </a>
-                  <div class="about-site">
-                    <div class="about-name"> DOVETAIL
-                    </div>
-                    <div class="about-discribe">
-                      Интернет-магазин с галереей товаров
-                    </div>
-                    <a class="button-about" href="#"> 14000 Р. </a>
-                  </div> 
-                </li>
-                
-              </ul>
-            </div> 
-
-
-           <!--JОБРАТИТЬ ВНИМАНИЕ И ДОДЕЛАТЬ: сюда нужно добавить блок пагинациц, классы можете переименовать-->
-          <!-- <div class="catalog-pagination-items">
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#" class="next">Следующая</a>
-          </div> -->
-
-
-          </div>
-    		
-  	    </div>
-
-      </div>
-
-    </main>
-
-    <!-- Блок карты -->
-
-    <div class="map">
-
-        <div class="container">
-
-        <div class="wrapper-map">  <!-- обои для карты и всего, что на ней находится -->
-
-          <div> <!-- место для яндекс карты -->
-            <img src=""  alt="Яндекс карта">
-          </div> 
-
-          <div class="wrapper-contact"> <!-- блок для расположения контакта на карте -->
-
-            <div class="title-contact"><!-- название студии на заголовке -->
-              <span>
-                <b>Nerds</b>
-                DESIGN STUDIO
-              </span>
-            </div> 
-            <div class="address-contact">
-              <p> 191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
-               <div class="phone-contact">  тел.
-               <a href="tel: +7 (812) 275-75-75">+7 (812) 275-75-75</a> 
-               </div>
-             
-              </p>
-              <div class="btn-top">
-              <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
-              </div>
-            </div>
-            </div>
-            <div class="label-contact">
-              <img src="img/drop.png" width="230" height="249" alt="Иконка на карте">
-            </div>
-            <!-- <div class="logo-contact">
-              <img src="img/logo-contact.png" width="93" height="39" alt="Логотип на карте">
-            </div> -->
-
-          
+           
+          </form>
 
         </div>
-     
-        </div>      
+
+        <!-- Блок проектов -->
+      
+        <div class="projects ">
+
+          <div class="nav-projects">
+            <span class="title-projects"> Сортировать:</span>
+
+            <ul class="filter-list no-list"> 
+              <li class="filter-list-item">
+                <a href="#" >По цене</a> 
+              </li>
+              <li class="filter-list-item">
+                <a href="#" > По типу</a>
+              </li>
+              <li class="filter-list-item">
+                <a href="#" > По функционалу</a>
+              </li>
+            </ul> 
+
+            <!-- ОБРАТИТЬ ВНИМАНИЕ: Добавила стрелочки -->
+            <div class="filter-direction">
+              <a href="#" class="icon-up-dir"></a>
+              <a href="#" class="icon-down-dir"></a>
+            </div>
+
+          </div>
+
+          <!-- <div class="wrapper-images"> -->
+          <ul class="list-images no-list">
+            <li>
+              <a href="#">
+                <img src="img/site-aviator.png" alt="Сайт Авиатор">
+              </a>
+              <div class="about-site">
+                <div class="about-site-name"> AVIATOR
+                </div>
+                <div class="about-site-describe">
+                  Одностраничный макет с авторским дизайном
+                </div>
+                <a class="about-site-button btn-red" href="#"> 8000 P. </a>
+              </div> 
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/site-sindy.png" alt="Сайт Песок">
+              </a>
+              <div class="about-site">
+                <div class="about-site-name"> Sunset
+                </div>
+                <div class="about-site-describe">Интернет-магазин с личным кабинетом</div>
+                <a class="about-site-button btn-red" href="#"> 10000 P. </a>
+              </div>  
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/site-forte.png" alt="Сайт Форте">
+              </a>
+              <div class="about-site">
+                <div class="about-site-name"> FORTE
+                </div>
+                <div class="about-site-describe">
+                  Отличный макет для личного блога
+                </div>
+                <a class="about-site-button btn-red" href="#"> 5000 P. </a>
+              </div> 
+            </li>
+
+
+            <li>
+              <a href="#">
+                <img src="img/site-organic.png" alt="Сайт Органик">
+              </a>
+              <div class="about-site">
+                <div class="about-site-name"> Modern Organic THAI
+                </div>
+                <div class="about-site-describe">
+                  Сайт для ресторана быстрого питания
+                </div>
+                <a class="about-site-button btn-red" href="#"> 12000 P. </a>
+              </div> 
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="img/site-avenue.png" alt="Сайт Аvenue">
+              </a>
+              <div class="about-site">
+                <div class="about-site-name"> AVENUE
+                </div>
+                <div class="about-site-describe">
+                  Макет для блога  о путешествиях
+                </div>
+                <a class="about-site-button btn-red" href="#"> 8000 P. </a>
+              </div> 
+              </li>
+
+            <li>
+              <a href="#">
+                <img src="img/site-dovetail.png" width="239" height="240" alt="Сайт Dovetail">
+              </a>
+              <div class="about-site">
+                <div class="about-site-name"> DOVETAIL
+                </div>
+                <div class="about-site-describe">
+                  Интернет-магазин с галереей товаров
+                </div>
+                <a class="about-site-button btn-red" href="#"> 14000 Р. </a>
+              </div> 
+            </li>
+            
+          </ul>
+          <!-- </div>  -->
+
+         <!-- ОБРАТИТЬ ВНИМАНИЕ И ДОДЕЛАТЬ: сюда нужно добавить блок пагинациц, классы можете переименовать-->
+
+        <div class="catalog-pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#" class="next">Следующая</a>
+        </div>
+
+        </div>
+  	
+      </div>
+
     </div>
+
+  </main>
+
+  <!-- Блок карты -->
+  <div class="map">
+
+      <div class="container">
+
+      <div class="wrapper-map">  <!-- обои для карты и всего, что на ней находится -->
+
+        <div class="wrapper-contact"> <!-- блок для расположения контакта на карте -->
+
+          <div class="title-contact"><!-- название студии на заголовке -->
+            <span>
+              <b>Nerds</b>
+              DESIGN STUDIO
+            </span>
+          </div> 
+          <div class="address-contact">
+            <p> 191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
+             <div class="phone-contact">  тел.
+             <a href="tel: +7 (812) 275-75-75">+7 (812) 275-75-75</a> 
+             </div>
+           
+            </p>
+            <div class="btn-top">
+            <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
+            </div>
+          </div>
+          </div>
+          <div class="label-contact">
+            <img src="img/drop.png" width="230" height="249" alt="Иконка на карте">
+          </div>
+          <!-- <div class="logo-contact">
+            <img src="img/logo-contact.png" width="93" height="39" alt="Логотип на карте">
+          </div> -->
+
+        
+
+      </div>
+   
+      </div>      
+  </div>
     
-    <!--  Футер -->
-
-    <footer class="main-footer"> 
-
+  <!--  Футер -->
+  <footer class="main-footer"> 
     <div class="container">
       <div class="footer clearfix"> 
         <div class="socialsite-buttons"> 
