@@ -17,19 +17,19 @@
             <a class="symbol-bin icon-basket" href="#">Корзина</a>
       </div> <!-- отдельный блок для Корзины -->     		
   			<nav class="main-navigation">   <!-- блок навигации на контейнере с серым фоном-->
-     		 <ul class="no-list navigation-menu">
-            <li>
-                <a href="#" class="main-navigation-link ">Студия</a>
-            </li>
-            <li>
-                <a href="#" class="main-navigation-link">Клиенты</a>
-            </li>
-            <li>
-                <a href="#" class="main-navigation-link active">Магазин</a>
-            </li>
-            <li>
-                <a href="#" class="main-navigation-link">Контакты</a>
-            </li> 
+     		  <ul class="no-list navigation-menu">
+          <li>
+           <a href="index.html" class="main-navigation-link">Студия</a>
+          </li>
+          <li>
+           <span class="main-navigation-link">Клиенты</span>
+          </li>
+          <li>
+            <a href="catalog.html" class="main-navigation-link active">Магазин</a>
+          </li>
+          <li>
+            <span class="main-navigation-link">Контакты</span>
+          </li> 
         </ul>
   		</nav>
     </div>
@@ -258,38 +258,57 @@
 
         <div class="wrapper-contact"> <!-- блок для расположения контакта на карте -->
 
-          <div class="title-contact"><!-- название студии на заголовке -->
-            <span>
-              <b>Nerds</b>
-              DESIGN STUDIO
-            </span>
-          </div> 
-          <div class="address-contact">
-            <p> 191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
-             <div class="phone-contact">  тел.
-             <a href="tel: +7 (812) 275-75-75">+7 (812) 275-75-75</a> 
-             </div>
-           
-            </p>
-            <div class="btn-top">
-            <a class="btn-contact" href="#">НАПИШИТЕ НАМ</a>
-            </div>
-          </div>
-          </div>
-          <div class="label-contact">
-            <img src="img/drop.png" width="230" height="249" alt="Иконка на карте">
-          </div>
+              <div class="title-contact"><!-- название студии на заголовке -->
+                <span>
+                  <b>Nerds</b>
+                  DESIGN STUDIO
+                </span>
+              </div> 
+              <div class="address-contact">
+                <p> 191186, Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
+                 <div class="phone-contact">  тел.
+                 <a href="tel: +7 (812) 275-75-75">+7 (812) 275-75-75</a> 
+                 </div>
+               
+                </p>
+                <div class="btn-top">     
+                <a class="btn-contact btn-red" href="#">НАПИШИТЕ НАМ</a>  
+              </div>
+              </div>
+              <div class="label-contact">
+                <img src="img/drop.png" width="230" height="249" alt="Иконка на карте">
+              </div>
           <!-- <div class="logo-contact">
             <img src="img/logo-contact.png" width="93" height="39" alt="Логотип на карте">
           </div> -->
-
-        
-
-      </div>
+        </div>
    
       </div>      
-  </div>
-    
+      </div>
+      <div class="order-form order-form-show"> 
+        <form class="order" method="post">
+          <fieldset class="order-form-name">
+            <label class="order-name" for="name"> Ваше имя: </label>
+            <input class="order-field" type="text" placeholder="Представьтесь, пожалуйста" id="name">     
+          </fieldset>
+          <fieldset class="order-form-name form-email">
+            <label class="order-name" for="email"> Ваш e-mail: </label>
+            <input class="order-field" type="email" placeholder="Для отправки ответа" id="email"> 
+          </fieldset>
+          <fieldset>
+            <label class="order-text" for="textarea"> Текст письма:</label>
+            <textarea class="order-field" placeholder="В свободной форме" id="textarea"></textarea>
+          </fieldset> 
+          <div class="form-button">
+          <input type="submit" value="Отправить" class="btn b-send">       
+          <input type="reset" value="Отмена" class="btn b-cansel">
+          </div>  
+          
+
+        </form>
+
+
+      </div>
   <!--  Футер -->
   <footer class="main-footer"> 
     <div class="container">
