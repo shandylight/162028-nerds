@@ -1031,6 +1031,7 @@ background-color:#e5e5e5;
 
 .order-form-show {
 	display: block;
+	position: relative;
 }
 
 .order-form {
@@ -1079,11 +1080,15 @@ label {
     height: 34px;
 }
 .order-text{
-	margin-top: 20px;
+	margin: 8px 0; 
+	display: inline-block; 
+
 }
+
 .form-email{
 	margin-left: 25px;
 }
+
 
 textarea.order-field {
 	resize: none;
@@ -1103,6 +1108,13 @@ font-size: 12px;
  line-height: 18px;	
  padding-top:10px;
  padding-bottom: 10px; 
+}
+
+.cross {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+
 }
 
 
