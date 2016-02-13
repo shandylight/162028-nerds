@@ -96,7 +96,12 @@ body {
 
 
 /*Работа со слайдером*/
-
+.promo {
+	background-color:  #eee;
+	display: block;
+	min-height: 310px;
+	margin: 0 auto;
+}
 
 .slider {
   position: relative;
@@ -1000,6 +1005,11 @@ input[type="checkbox"]:checked + label:before {
   line-height: 34px;
   min-width: 34px;
 }
+	
+.catalog-pagination a:active { 
+background-color:#d5d5d5; 
+box-shadow: inset 0px 3px #cacaca; 
+}
 
 .catalog-pagination .next {
   padding: 0 10px;
@@ -1014,10 +1024,6 @@ input[type="checkbox"]:checked + label:before {
 .catalog-pagination a:hover {
 
 background-color:#e5e5e5;
-}
-.catalog-pagination a:focus {
-background-color:#d5d5d5;
-box-shadow: 0px -3px #cacaca;
 }
 
 
