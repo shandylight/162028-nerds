@@ -48,65 +48,42 @@
 	</header>
 
   <!-- Блок слайдера -->
-	<div class="promo"> 
+	
     <div class="container"> <!-- хитрый контейнер для центрирования -->
-
       <div class="slider">
-        <!-- Общий блок для всего слайдера, его позиционируем относительно(position:relative) чтобы потом, относительно его спозиционировать инпуты и блок radio-button -->
-
-        <input type="radio" id="button1" name="target" checked>
-        <input type="radio" id="button2" name="target">
-        <input type="radio" id="button3" name="target"> 
-
-        <div class="radio-button"> <!-- создаем радио кнопки для слайдера --> 
-          <!-- чтобы сделать слайдер нам нужно задать 3 инпута. Так как инпуты нужно стилизовать - сделать их такими, как задумал дизайнер, мы будем стилизовать label. Вы уже знаете зачем label добавляется for="", а input id="". Поэтому за выбор слайда у нас будет отвечать не сам input, а привязанный к нему label(это не обязательно должно быть слово). Вы уже объединили их в блок, который потом спозиционируем посередине.  -->
-
-          <label for="button1"> </label>
-          <label for="button2"> </label>
-          <label for="button3"> </label>
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
         </div>
-
-        <div class="slides">   <!-- прописываю каждый слайд по отдельности --> 
-
-          <div class="slide active">   <!-- Слайд 1 -->
-            <div class="slogan-item">
-              <div class="slogan-big">Долго, дорого,  скрупулезно.</div>
-              <p class="slogan-small">Математически выверенный дизайн <br>  для вашего сайта или мобильного приложения</p>
-              <a class="btn-slide btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
-            </div>
-
-            <div class="image-item">
-              <img src="img/slide1.png" width="338" height="231" alt="Картинки слайдера">
-            </div>
-          </div> 
-
-          <div class="slide"> <!-- Слайд 2 -->
-            <div class="slogan-item">
-              <p class="slogan-big">Любите ли вы математику, как любим ее мы?</p>
-              <p>Нашим дизайнерам мы удаляем нейроны, ответственные
-              за креатив, чтобы дать им возможность все просчитать </p>
-              <a class="btn-slide btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
-            </div>
-            <div class="image-item">
-              <img src="img/slide2.png" width="230" height="249" alt="Картинки слайдера">
+        <div class="slides">
+          <div class="slide">
+            <div class="slide-text">
+              <div class="slide-title">Долго, дорого,<br>скрупулезно</div>
+              <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+              <a class="btn" href="#">Узнать больше</a>
             </div>
           </div>
-
-          <div class="slide"> <!-- Слайд 3 -->
-            <div class="slogan-item">
-              <p class="slogan-big">Только наркотики, только хардкор!</p>
-              <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
-              <a class="btn-slide btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
-            </div>
-            <div class="image-item">
-              <img src="img/slide3.png" width="333" height="319" alt="Картинки слайдера">
+          <div class="slide">
+            <div class="slide-text">
+              <div class="slide-title">Любите ли вы математику,<br> как любим ее мы?</div>
+              <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать.</p>
+              <a class="btn" href="#">Узнать больше</a>
             </div>
           </div>
-
-        </div> 
+          <div class="slide">
+            <div class="slide-text">
+              <div class="slide-title">Только наркотики,<br> только хардкор!</div>
+              <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов.</p>
+              <a class="btn" href="#">Узнать больше</a>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </div>
+  
   </div>
 
 
