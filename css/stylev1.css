@@ -93,29 +93,41 @@ body {
 }
 
 
-/* =========  Пусть слайдер пока остается в таком виде ========= */
+
 
 /*Работа со слайдером*/
 
-.promo {
-	background-color:  #eee;
-	display: block;
-	min-height: 310px;
-	margin: 0 auto;
+
+.slider {
+  position: relative;
+
+  width: 880px;
+  margin: 0 auto;
 }
-.slider { 
-	display: block; 
-	position: relative; 
-}
-.slide {	
-	height: 100%;
-	width: 100%;
+
+.slide {
+  min-height: 310px;
+
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
 }
 
 .slider input[type="radio"] {
   display: none;
 }
-.radio-button label {
+
+.slider-controls {
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+
+  width: 200px;
+  margin-left: -100px;
+
+  text-align: center;
+}
+
+.slider-controls label {
   display: inline-block;
   width: 4px;
   height: 4px;
@@ -128,79 +140,76 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-.radio-button{
-  position: absolute;
-  bottom: 95px;
-  left: 50%;
-  width: 200px;
-  margin-left: -100px;
-  text-align: center;
+
+.slide-text {
+  width: 500px;
+  padding: 30px 0;
 }
 
-/* чтобы скрыть какой-либо блок достаточно задать ему свойство 
-display:none 
-Про :nth-child(2) будут рассказывать на вебинаре
-*/
+.slide-title {
+  font-weight: 500;
+  font-size: 36px;
+}
 
-.slide:nth-child(2),
+.slide p {
+  font-weight: 500;
+  line-height: 22px;
+  color: #283136;
+}
+
+.slide .btn {
+  display: block;
+  width: 220px;
+  margin-top: 25px;
+  padding: 12px 10px;
+
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background: #fb565a;
+  border-radius: 3px;
+}
+
+.slide:nth-child(1) {
+  background-image: url("img/slide1.png");
+}
+
+.slide:nth-child(2) {
+  background-image: url("img/slide2.png");
+}
+
 .slide:nth-child(3) {
-	display: none;
+  background-image: url("img/slide3.png");
 }
-.slogan-item {
-	display: inline-block;
-	width: 400px;
-}
-.slogan-big {
-	font-size: 36px; 
-	font-weight: 500;
-	line-height: 36px;
-	padding-top: 23px;
-}
-.slogan-small {
-	display: block; 
-	font-weight: 300; 
-	font-size: 16px;
-	line-height: 22px;
-}
-.btn { 
-	background: #fb565a;
-	margin-top: 18px;
-	padding: 0 70px;
-}
-.btn-slide {
-	border-radius: 3px;
-	color: #fff;
-	display: inline-block;
-	font-size: 16px;
-	height: 38px;
-	line-height: 38px;
-	text-decoration: none;
-  text-align: center;
-  vertical-align: top;
-}
-.image-item {
-	display: block;
-	float:right;
-}
- <img src="img/slide1.png" 
- width="338" height="231" alt="Картинки слайдера">
-<img src="img/slide2.png" 
-width="230" height="249" alt="Картинки слайдера">
- <img src="img/slide3.png"
-  width="333" height="319" alt="Картинки слайдера">
 
-/* =========  Пусть слайдер пока остается в таком виде ========= */
+.slide {
+  display: none;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+  display: block;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+  display: block;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+  display: block;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background: #c1c1c1;
+}
 
 
-/* ====  Разметка блока с услугами ==== */
-/*
-1. элементам li внутри block-columns задать display: inline-block и ширину
-(замерить в макете);
-2. внутри li не нужен еще один div. Li итак блочный элемент и 
-лишняя вложенность нам не нужна. 
-классы для этих дивов лучше перенесите для li (я сделала для 
-первого li, повторите для двух других)
-*/
+/* =========   ========= */
 
 .main-centre {
 	padding-top: 75px;
