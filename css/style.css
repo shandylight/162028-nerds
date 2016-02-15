@@ -1,106 +1,119 @@
- /*Общие стили */
+/*Общие стили */
 body {
-	font-family: "Roboto", Verdana, sans-serif;
-	margin: 0;
-	padding:0;
+  font-family: "Roboto", Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 .clearfix::after {
-	content: '';
-	clear: both;
-	display: table;
+  content: '';
+  clear: both;
+  display: table;
 }
+
 .no-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Хедер*/
 .main-header {
-	background-color: #eee;
-	margin: 0 auto;
-	width: 100%;
+  background-color: #eee;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 27px;
 }
+
 .container {
-	margin: 0 auto;
-	width: 880px;	
+  margin: 0 auto;
+  width: 880px;
 }
+
 .logo-img {
-	display: inline-block;
-	float: left;
-	vertical-align: top;
-	width: 140px;
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  width: 140px;
 }
-.main-navigation  {
-	display: inline-block;
-	float: right;
-	margin-top: 41px;
-	margin-right: 20px;
-	vertical-align: top;
+
+.main-navigation {
+  display: inline-block;
+  float: right;
+  margin-top: 31px;
+  margin-right: 27px;
+  vertical-align: top;
 }
+
 .main-navigation-link.active {
   border-bottom: 2px solid #FB565A;
-	color: #000;
+  color: #000;
 }
+
 .main-navigation-link:hover {
-	color: #fb565a;
-	border-bottom: none;
+  color: #fb565a;
+  border-bottom: none;
 }
+
 .main-navigation-link:focus {
-	color: #8f8f8f;
-	border-bottom: none;
+  color: #8f8f8f;
+  border-bottom: none;
 }
 
 .main-navigation ul {
-	display: inline-block;
-	vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
+
 .main-navigation ul li {
-	display: inline-block;
-	vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
+
 .main-navigation-link {
-	color: #000;
-	display: inline-block;
-	font-size: 14px;
-	margin-left: 40px;
-	text-decoration: none;
-	text-transform: uppercase;
+  color: #000;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 33px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-	
 
 .place-symbol {
-	display: inline-block; 
-	float: right;
-	padding-top: 41px;
-	vertical-align: top;
+  display: inline-block;
+  float: right;
+  padding-top: 30px;
+  vertical-align: top;
 }
 
 .symbol-bin {
-	color:#000;
-	font-size: 14px;
-	padding-left: 35px;
-	text-transform: uppercase;
-	text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  padding-left: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .icon-basket:hover {
-	color: #fb565a;
+  color: #fb565a;
+}
+
+.place-symbol .icon-basket::before {
+  margin-right: 8px;
+  font-size: 15px;
 }
 
 .icon-basket:focus {
-	color: #d0d0d0;
+  color: #d0d0d0;
 }
-
-
-
 
 /*Работа со слайдером*/
 .promo {
-	background-color:  #eee;
-	display: block;
-	min-height: 310px;
-	margin: 0 auto;
+  background-color: #eee;
+  display: block;
+  min-height: 310px;
+  margin: 0 auto;
+  padding-top: 38px;
 }
 
 .slider {
@@ -123,7 +136,7 @@ body {
 
 .slider-controls {
   position: absolute;
-  bottom: 95px;
+  bottom: 85px;
   left: 50%;
 
   width: 200px;
@@ -154,18 +167,21 @@ body {
 .slide-title {
   font-weight: 500;
   font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -1.9px;
 }
 
 .slide p {
   font-weight: 500;
-  line-height: 22px;
+  line-height: 23px;
+  letter-spacing: -.8px;
   color: #283136;
 }
 
 .slide .btn {
   display: block;
   width: 220px;
-  margin-top: 25px;
+  margin-top: 27px;
   padding: 12px 10px;
 
   font-weight: 300;
@@ -213,86 +229,110 @@ body {
   background: #c1c1c1;
 }
 
-
 /* =========   ========= */
 
 .main-centre {
-	padding-top: 75px;
-	padding-bottom: 75px;
+  padding-top: 78px;
+  padding-bottom: 68px;
 }
 
 .block-columns {
-	margin-left: -38px;
-	margin-right: -38px;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-bottom: 80px;
 }
+
+.fz-null {
+  font-size: 0;
+}
+
 .bk {
-	display: inline-block;
-	margin-left: 38px;
-	margin-right: 38px;
-	vertical-align: top;
-	width: 240px;
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
+  vertical-align: top;
+  width: 240px;
 }
+
+.bk h2 {
+  margin-top: 22px;
+  letter-spacing: -2.2px;
+}
+
 h2 {
-	font-size: 18px;
-	line-height: 30px;
-	text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
+
 .block-columns p {
-	font-size: 15px;
-	line-height: 22px;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -.8px;
+  margin-bottom: 26px;
 }
 
 .btn-columns {
-	border-radius: 3px;
-	color: #fff;
-	display: inline-block;
-	font-size: 12px;
-	height: 38px;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  height: 38px;
   line-height: 38px;
-	padding: 0 38px;
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-	vertical-align: top;
+  padding: 0 38px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: top;
 }
 
 .btn-red {
   background: #fb565a;
 }
+
 .btn-red:hover {
   background: #d6494d;
 }
+
 .btn-red:focus {
-	background: #b63538;
-	box-shadow: inset 0 3px 0 0 #9B2D30;
-}   
+  background: #b63538;
+  box-shadow: inset 0 3px 0 0 #9B2D30;
+}
+
 .btn-green {
   background: #00ca74;
 }
+
 .btn-green:hover {
   background: #01a25e;
 }
-.btn-green:focus{
-	box-shadow: inset 0 3px 0 0#007b47;
+
+.btn-green:focus {
+  box-shadow: inset 0 3px 0 0 #007b47;
   background: #009053;
 }
+
 .btn-yellow {
   background: #efc84a;
 }
+
 .btn-yellow:hover {
   background: #d6ae2c;
 }
+
 .btn-yellow:focus {
-	box-shadow: inset 0 3px 0 0 #a3841f;
-	background: #c09b24;
-} 
+  box-shadow: inset 0 3px 0 0 #a3841f;
+  background: #c09b24;
+}
+
 .about-site-button:hover {
-background: #d6494d;	
+  background: #d6494d;
 }
 
 .about-site-button:focus {
-	background: #b63538;
-} 
+  background: #b63538;
+}
+
 /* ====  Разметка блока c текстом ==== */
 /*
 1. Блоки description-first и description-second можете сделать 
@@ -302,132 +342,151 @@ background: #d6494d;
 */
 
 .description {
-	color: #181818;
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 22px;
-	padding: 70px 0 45px 0;
-	border-bottom: 2px solid #eee;
+  color: #181818;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 68px 0 45px 0;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 
-.description-first{
-	float: left;
-	width: 580px;
+.description-first {
+  float: left;
+  width: 580px;
 }
 
-.description-slogan{
- font-size: 36px;
- font-weight: 500;
- line-height: 36px;
- padding-bottom: 5px;
+.description-slogan {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+  padding-bottom: 5px;
+  letter-spacing: -4px;
+}
+
+.description-first p {
+  letter-spacing: -.7px;
 }
 
 .title-orders {
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 22px;
-	margin: 44px 0 0 0;
-	text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 44px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: -.8px;
 }
+
 .text-orders {
   margin: 21px 0 0 0;
+  letter-spacing: -.8px;
 }
 
 .text-orders li {
-	padding: 0 0 23px 35px;
-	position: relative;
+  padding: 0 0 23px 35px;
+  position: relative;
 }
 
 .text-orders li:before {
-	border: 1px solid #fb565a;
-	content: '';
-	left: 0;
-	top: 12px;
-	position: absolute;
-	width: 25px;
+  border: 1px solid #fb565a;
+  content: '';
+  left: 0;
+  top: 12px;
+  position: absolute;
+  width: 25px;
 }
 
-.description-second{
-	float: right;
-	width: 240px;
+.description-second {
+  float: right;
+  width: 240px;
 }
 
 .description-logo {
   text-align: center;
+  margin-top: -8px;
+  margin-left: 10px;
 }
 
 .description-year {
-	margin-top: 20px;
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
+  margin-top: 19px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -1.3px;
 }
 
 .description-year:before {
   left: -10px;
 }
-.description-year:after{
-	right: 10px;
+
+.description-year:after {
+  right: 10px;
 }
 
-.description-year:before, .description-year:after{
+.description-year:before, .description-year:after {
   background: #eee;
   content: '';
   height: 2px;
   margin: 0 0 0 12px;
-  position: absolute;top: 10px;
+  position: absolute;
+  top: 10px;
   width: 55px;
 }
 
 .title-profits {
-	font-size: 16px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 22px;
-  margin: 55px 0 0 0;
+  margin: 64px 0 0 0;
   text-transform: uppercase;
 }
 
-.text-profits{
+.text-profits {
   list-style: none;
   margin: 21px 0 0 0;
   padding: 0;
 }
 
 .text-profits li {
-	font-size: 16px;
-  padding: 0 0 23px 35px;
+  font-size: 16px;
+  padding: 0 0 22px 35px;
   position: relative;
+  letter-spacing: -1px;
 }
 
 .text-profits li:before {
-	border: 1px solid #fb565a;
-	content: '';
-	left: 0;
-	position: absolute;
-	top: 12px;
-	width: 25px;
+  border: 1px solid #fb565a;
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 25px;
 }
-
 
 .portfolio {
-	border-bottom: 2px solid #eee;
-	margin: 0;
-	padding: 40px 20px 10px;
-}
-.portfolio-items li {
-	display: inline-block;
-	margin: 0 30px;
-	text-align: center;
-	vertical-align: middle;
-	width: 209px;
-}
-.portfolio-items a{
-	opacity: 0.2;
-}
-.portfolio-items a:hover {
- opacity: 1;
+  border-bottom: 2px solid #eee;
+  margin: 0;
+  padding: 29px 6px 18px;
 }
 
+.portfolio-items li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 209px;
+}
+
+.portfolio-items li + li {
+  margin-left: 109px;
+}
+
+.portfolio-items a {
+  opacity: 0.2;
+}
+
+.portfolio-items a:hover {
+  opacity: 1;
+}
 
 /* ====  Разметка блока c логотипами ==== */
 /*
@@ -452,8 +511,6 @@ background: #d6494d;
 
 */
 
-
-
 /* ====  Разметка блока карты  ==== */
 /*
 1. для wrapper-map задаете свойство position: relative; 
@@ -464,122 +521,151 @@ background: #d6494d;
 отступы сверху (top:) и слева(left)
 */
 
+.map {
+  margin-top: 11px;
+  background: #fff url("../img/map.jpg") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
 .wrapper-map {
-	background: #eee url("../img/map.jpg") no-repeat ;
-	height: 415px;
-	position: relative;
-	width: 100%;
+  height: 415px;
+  position: relative;
+  width: 100%;
 }
 
 .wrapper-contact {
-	background: #fff;
-	color: #666;
-	left: 15px;
-	padding: 32px 24px;
-	position: absolute;
-	top: 90px;
-	width: 202px;
+  background: #fff;
+  color: #666;
+  left: 1px;
+  padding: 24px 20px;
+  position: absolute;
+  top: 87px;
+  width: 210px;
 }
 
-.title-contact{
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 30px;
-	text-transform: uppercase;
+.title-contact {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -1.4px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
-.address-contact{
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 20px;
-	margin: 12px 0;
+.address-contact {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
 }
 
-.phone-contact a{
-	color: #000;
-	text-decoration: none;
+.address-contact p {
+  margin-bottom: 20px;
+  letter-spacing: -.6px;
+  margin-top: 12px;
 }
 
- 
+.phone-contact {
+  letter-spacing: -1px;
+}
+
+.phone-contact a {
+  color: #000;
+  text-decoration: none;
+}
+
 .btn-contact {
-	border-radius: 3px;
+  border-radius: 3px;
   color: #fff;
   display: inline-block;
   font-size: 12px;
   font-weight: 300;
   line-height: 18px;
-  padding: 15px 50px;
+  margin-top: 30px;
+  padding: 10px 16px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: top;
-  width: 100px;
-} 
+  width: 176px;
+}
 
 .label-contact {
-position: absolute; 
-left: 400px; 
-top: -100px; 
+  position: absolute;
+  left: 681px;
+  top: 112px;
 }
 
 /* ====  Разметка блока footer  ==== */
 
 .socialsite-buttons {
-	float: left;
-	width: 320px;
+  float: left;
+  width: 320px;
 }
 
 .socialsite-buttons a {
-	background: #e1e1e1;
-	border-radius: 50%;
-	display: inline-block;
-	height: 60px; 
-	margin: 5px 10px;
-	padding: 5px;
-	text-align: center;
-	width: 60px;
+  background: #e1e1e1;
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  margin: 5px 0;
+  padding: 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.socialsite-buttons a + a {
+  margin-left: 25px;
 }
 
 .btn-site {
-	display: inline-block;
+  display: inline-block;
   vertical-align: middle;
 }
+
 .footer {
-	padding-top: 75px;
-	padding-bottom: 75px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
-.icon-vk,.icon-facebook,.icon-instagramm {
-	font-size: 26px;
-	color: #fff;
-	line-height: 60px;
+
+.icon-vk, .icon-facebook, .icon-instagramm {
+  font-size: 26px;
+  color: #fff;
+  line-height: 50px;
 }
-.socialsite-buttons a:hover{
-	background:#fb565a;
+
+.socialsite-buttons a:hover {
+  background: #fb565a;
 }
+
 .socialsite-buttons a:active {
   background: #b63538;
   box-shadow: inset 0 3px 0 0 #9B2D30;
 }
-.footer-text{
-	float: right;
-	width: 555px;
-}
-.text-discount{
-	font-size: 36px;
-	font-weight: 300;  
-	line-height: 36px;   
-}
-.sold {
-	font-size: 16px;
-  font-weight: 500;
+
+.footer-text {
+  float: right;
+  width: 555px;
 }
 
+.text-discount {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 36px;
+  margin: 0 0 11px 0;
+  letter-spacing: -2.9px;
+}
+
+.sold {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
 
 /* Страница Каталога */
 
 .catalog-welcome {
-	background: #eee;	
-	padding-top: 60px;
+  background: #eee;
+  padding-top: 60px;
 }
 
 .invitation {
@@ -588,22 +674,25 @@ top: -100px;
   font-weight: 200;
   text-transform: uppercase;
   text-align: center;
-  padding: 0 0 90px 0;
+  padding: 0 0 84px 0;
+  letter-spacing: -1px;
 }
 
 .sidebar-choice {
-	float: left;
-	width: 240px;
+  float: left;
+  width: 240px;
 }
 
 /*=====блок бегунка===== */
 
 .range-filter {
-  margin-bottom: 60px;
-  width: 240px;
+  margin-bottom: 49px;
+  margin-top: 19px;
+  width: 239px;
 }
+
 .range-controls {
-	border-radius: 5px;
+  border-radius: 5px;
   background: #f1f1f1;
   height: 41px;
   margin-bottom: 15px;
@@ -612,17 +701,20 @@ top: -100px;
   padding-right: 20px;
   padding-left: 20px;
 }
+
 .range-controls .scale {
-	background: #d7dcde;
+  background: #d7dcde;
   height: 2px;
 }
+
 .range-controls .bar {
   background: #00ca74;
   height: 2px;
   width: 70%;
 }
-.range-controls .toggle { 
-	border: 8px solid #fff;
+
+.range-controls .toggle {
+  border: 8px solid #fff;
   background: #ababab;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -633,184 +725,196 @@ top: -100px;
   left: 0px;
   width: 4px;
 }
+
 .range-controls .toggle-min {
   left: 20px;
 }
+
 .range-controls .toggle-max {
   left: 145px;
 }
+
 .price-controls label {
   display: inline-block;
-  font-size: 16px; 
+  font-size: 16px;
   vertical-align: top;
   width: 50%;
 }
+
 .price-controls {
   font-size: 0;
+  text-transform: uppercase;
 }
+
 .price-controls input {
-	background: #f1f1f1;
+  background: #f1f1f1;
   border: none;
   border-radius: 5px;
   color: #283136;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
-  margin-left: 10px;
+  margin-left: 2px;
   outline: none;
   text-align: center;
-  padding: 8px 10px;
+  padding: 9px 10px;
   width: 60px;
 }
+
 .max-price {
   text-align: right;
 }
+
 .range-controls .toggle-min {
-  left: 50px;
+  left: 19px;
 }
+
 .range-controls .toggle-max {
-  left: 110px;
+  left: 159px;
 }
+
 .sidebar-choice legend {
-	font-size: 18px;
-	font-weight: 500;
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: -5px;
+  text-transform: uppercase;
 }
+
 /* =====  ОБРАТИТЬ ВНИМАНИЕ: блок фильтров в сайдбаре =====  */
 
 .price-filter,
 .filter-layout,
 .filter-features {
-	border: none;
-	margin: 0 0 50px;
-	padding: 0;
+  border: none;
+  margin: 0 0 29px;
+  padding: 0;
 }
 
 .filter-layout label,
 .filter-features label {
-	cursor: pointer;
-	font-weight: 300; 
-	font-size: 16px;
-	display: block;
-	margin: 0 0 20px;
-	position: relative;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 16px;
+  display: block;
+  margin: 0 0 20px;
+  position: relative;
 }
 
 .filter-layout legend,
 .filter-features legend {
-	font-weight: 500;
-	font-size: 18px;
-	margin: 0 0 10px;
-	text-transform: uppercase;
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0 -4px 20px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
 }
 
 .filter-btn {
-	background: #f1f1f1;
-	border-radius: 3px;
-	cursor: pointer;
-	display: inline-block;
-	padding: 13px 0;
-	text-transform: uppercase;
-	text-align: center;
-	vertical-align: center;
-	width: 154px;
+  background: #f1f1f1;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  padding: 13px 0 11px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px;
+  width: 155px;
 }
 
 /* радио и чекбоксы из иконочного шрифта */
 
-
 input[type="radio"],
 input[type="checkbox"] {
-	display: none;
+  display: none;
 }
-
 
 /*Я здесь не поняла задумку дизайнера, просмотрите, пожалуйста!!!!*/
 
-
 input[type="radio"] + label {
-	cursor: pointer;
-	display: block;
-	line-height: 25px;
-	font-size: 20px;
-	vertical-align: top;
-} 
- 
-input[type="radio"] + label:before {
-	color: #c1c1c1;
-	content: "\25cb";
-	display: inline-block;
-	font-family: "symbols-nerds";
-	font-size: 20px;
-	margin-right: 10px;
-	vertical-align: top; 
-}
-
-input[type="radio"]:checked + label:before {
-	color: #c1c1c1;
-	content: "\25cf";
-
-} 
-
-input[type="radio"]:disabled + label:before {
-	color: #c1c1c1;
-	content: "\25cf";
-}
-
-input[type="radio"] + label:hover:before {
-	color: #000;
-	/*color: #bcbcbc;*/
-}
-
-input[type="radio"]:checked + label:hover:before {
-	/*color: #bcbcbc;*/
-	content: "\25cf";
-	color: #000;
-} 
-
-input[type="radio"]:disabled + label:hover:before {
-	content: "\25cf";
-	color: #f1f1f1;
-} 
-
-input[type="checkbox"] + label {
-	cursor: pointer;
-	display: block;
-	font-size: 20px;
-	line-height: 25px;
-	vertical-align: top;
-} 
-
-input[type="checkbox"] + label:before {
-	color: #c1c1c1;
-	content: "\2610";
-	display: inline-block;
-	font-family: "symbols-nerds";
-	font-size: 20px;
-	margin-right: 15px;
-	vertical-align: top; 
-}
-
-input[type="checkbox"] + label:hover:before {
-	color: #bcbcbc;
-}
-
-input[type="checkbox"]:checked + label:hover:before {
-	color: #bcbcbc;
-}
-
-input[type="checkbox"]:disabled + label:before {
-	color: #f0f0f0;
-}
-
-input[type="checkbox"]:checked + label:before {
-	color: #c1c1c1;
-	content: "\2611";
-	display: inline-block;
-  font-family: "symbols-nerds";
-  font-size: 20px;
-  margin-right: 12px;
+  cursor: pointer;
+  display: block;
+  line-height: 20px;
+  font-size: 15px;
   vertical-align: top;
 }
 
+input[type="radio"] + label:before {
+  color: #c1c1c1;
+  content: "\25cb";
+  display: inline-block;
+  font-family: "symbols-nerds";
+  font-size: 28px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+input[type="radio"]:checked + label:before {
+  color: #c1c1c1;
+  content: "\25cf";
+
+}
+
+input[type="radio"]:disabled + label:before {
+  color: #c1c1c1;
+  content: "\25cf";
+}
+
+input[type="radio"] + label:hover:before {
+  color: #000;
+  /*color: #bcbcbc;*/
+}
+
+input[type="radio"]:checked + label:hover:before {
+  /*color: #bcbcbc;*/
+  content: "\25cf";
+  color: #000;
+}
+
+input[type="radio"]:disabled + label:hover:before {
+  content: "\25cf";
+  color: #f1f1f1;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+input[type="checkbox"] + label:before {
+  color: #c1c1c1;
+  content: "\2610";
+  display: inline-block;
+  font-family: "symbols-nerds";
+  font-size: 27px;
+  margin-right: 13px;
+  vertical-align: top;
+}
+
+input[type="checkbox"] + label:hover:before {
+  color: #bcbcbc;
+}
+
+input[type="checkbox"]:checked + label:hover:before {
+  color: #bcbcbc;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  color: #f0f0f0;
+}
+
+input[type="checkbox"]:checked + label:before {
+  color: #c1c1c1;
+  content: "\2611";
+  display: inline-block;
+  font-family: "symbols-nerds";
+  font-size: 27px;
+  margin-right: 9px;
+  vertical-align: top;
+}
 
 /*+++++++++++++++++++++++++++++++++*/
 
@@ -818,184 +922,209 @@ input[type="checkbox"]:checked + label:before {
 
 .projects {
   float: right;
-  width: 560px;
+  width: 563px;
 }
 
 /* сортировка верхняя start */
 
 .nav-projects {
-	font-size: 12px;
-	font-weight: 500;
-	min-height: 40px;
-	text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  min-height: 40px;
+  text-transform: uppercase;
 }
 
 .title-projects {
   display: inline-block;
   font-weight: 500;
   font-size: 12px;
-  margin: 0;
+  margin: 1px 12px 0 0;
   padding: 0;
   vertical-align: top;
 }
 
-.filter-list  {
-	display: inline-block;
-	margin-right: 74px;
-	padding: 0;
-	vertical-align: top;
+.filter-list {
+  display: inline-block;
+  margin-right: 84px;
+  margin-top: 1px;
+  padding: 0;
+  vertical-align: top;
 }
 
 .filter-list-item {
-	display: inline-block;
-	margin: 0 20px 0;
-	vertical-align: top; 
+  display: inline-block;
+  margin: 0 20px 0;
+  letter-spacing: -0.5px;;
+  vertical-align: top;
 }
 
 .filter-list-item a {
-	border-bottom: 1px dotted #00ca74;
-	color: #c1c1c1;
-	font-size: 12px;
-	text-decoration: none;
+  border-bottom: 1px dotted #00ca74;
+  color: #c1c1c1;
+  font-size: 12px;
+  text-decoration: none;
 }
+
 .filter-list-item a:hover {
-	border-bottom: 1px solid #00ca74;
-	color: #000;
+  border-bottom: 1px solid #00ca74;
+  color: #000;
 }
+
 .filter-list-item a:active {
-	border-bottom: none;
-	color: #000;
+  border-bottom: none;
+  color: #000;
 }
+
 .filter-direction {
-	display: inline-block;
-	vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .filter-direction a {
-	display: inline-block;
-	font-size: 21px;
-	line-height: 2px;
-	margin: 0;
-	padding: 0;
-	vertical-align: top;
-	text-decoration: none;
+  display: inline-block;
+  font-size: 23px;
+  line-height: 2px;
+  padding: 0;
+  vertical-align: top;
+  text-decoration: none;
 }
 
+.filter-direction .icon-up-dir::before {
+  margin: -3px 0;
+  width: auto;
+}
+
+/*.filter-direction .icon-up-dir {*/
+  /*margin: -3px 0;*/
+/*}*/
+
 .filter-direction .icon-up-dir {
-	color: #00ca74;
-	text-align: left;
-	width: 17px;
+  color: #00ca74;
+  text-align: left;
 }
 
 .filter-direction .icon-down-dir {
-	color: gray;
-	text-align: left;
-	width: 17px;
-} 
+  color: gray;
+  text-align: left;
+}
+
+.icon-down-dir:hover,
+.icon-down-dir {
+  color: #00ca74;
+}
+
+.filter-direction .icon-down-dir::before {
+  width: auto;
+  margin: -3px 0;
+}
 
 /* сортировка верхняя end */
 
-
 /* список проектов */
 
-.list-images  {
-/*	display: inline-block;
-	margin: 0px -40px ;
-	vertical-align: top;*/
-	font-size: 0;
+.list-images {
+  /*	display: inline-block;
+    margin: 0px -40px ;
+    vertical-align: top;*/
+  font-size: 0;
 }
 
 .list-images li {
-	border-top: 30px solid #f1f1f1;
-	border-radius: 3px;
+  border-top: 30px solid #f1f1f1;
+  border-radius: 3px;
+  cursor: pointer;
   display: inline-block;
   height: 240px;
-  margin: 0 38px 75px 2px;
+  margin: 0 80px 79px 2px;
   position: relative;
   vertical-align: top;
   width: 240px;
-} 
-	
+}
+
+.list-images li:nth-child(even) {
+  margin: 0;
+}
+
 .list-images li::after {
-	background: #fff;
+  background: #fff;
   border-radius: 50%;
-  box-shadow: 17px 0 0 #fff,34px 0 0 #fff;
+  box-shadow: 17px 0 0 #fff, 34px 0 0 #fff;
   content: "";
   height: 10px;
   left: 12px;
   position: absolute;
-  top: -20px; 
+  top: -20px;
   width: 10px;
 }
-.list-images li:hover{
-	border-top: 30px solid #797979;
-	}
 
-
-
-
-.about-site {
-	background: #fff;
-	height: 140px;
-	padding: 30px;
-	left: 20px;
-	top: 20px;
-	position: absolute;
-	text-align: center;
-	width: 140px;
+.list-images li:hover {
+  border-top: 30px solid #797979;
 }
 
-.about-site{
-	display: none;
+.about-site {
+  background: #fff;
+  height: 140px;
+  padding: 31px 18px;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+  text-align: center;
+  width: 164px;
+}
+
+.about-site {
+  display: none;
 }
 
 .list-images li:hover .about-site {
- display: block;
+  display: block;
 }
 
 .about-site-name {
-	font-size: 22px;
-	text-transform: uppercase;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
 .about-site-describe {
-	font-size: 14px;
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 
 .about-site-button {
-	border-radius: 3px;
+  border-radius: 3px;
   color: #fff;
   display: inline-block;
-  font-size: 14px;
+  font-size: 17px;
   margin: 0 auto;
   text-align: center;
   text-decoration: none;
-  padding: 11px 0;
+  letter-spacing: -1px;
+  padding: 9px 0;
   vertical-align: top;
   width: 140px;
 }
 
-
 /* пагинация */
 
 .catalog-pagination {
-	font-size: 0;
+  font-size: 0;
 }
 
 .catalog-pagination a {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	color: #000;
-	display: inline-block;
-	font-size: 12px;
-	height: 38px;
-	line-height: 38px;
-	margin: 0 3px;
-	min-width: 38px;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	vertical-align: top;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  color: #000;
+  display: inline-block;
+  font-size: 12px;
+  height: 38px;
+  line-height: 38px;
+  margin: 2px 4px 0;
+  min-width: 38px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
 }
 
 .catalog-pagination a.active {
@@ -1005,119 +1134,121 @@ input[type="checkbox"]:checked + label:before {
   line-height: 34px;
   min-width: 34px;
 }
-	
-.catalog-pagination a:active { 
-background-color:#d5d5d5; 
-box-shadow: inset 0px 3px #cacaca; 
+
+.catalog-pagination a:active {
+  background-color: #d5d5d5;
+  box-shadow: inset 0px 3px #cacaca;
 }
 
 .catalog-pagination .next {
-  padding: 0 10px;
   height: 38px;
   line-height: 38px;
   min-width: 38px;
-  padding: 0 38px;
+  margin-left: 8px;
+  padding: 0 29px;
   text-align: center;
   text-decoration: none;
   vertical-align: top;
 }
+
 .catalog-pagination a:hover {
 
-background-color:#e5e5e5;
+  background-color: #e5e5e5;
 }
-
 
 /*стили формы заказа*/
 
 .order-form-show {
-	display: block;
-	position: relative;
+  display: block;
+  position: relative;
 }
 
 .order-form {
-	background: #fff;
-    box-shadow: 0 0 10px #000;
-    position: fixed;
-    font-size: 0;
-    left: 50%;
-    top: 50%;
-    padding: 50px 80px 60px 90px;
-    margin: -170px 0 0 -315px;
-    height: 330px;
-    width: 490px;
+  background: #fff;
+  box-shadow: 0 0 10px #000;
+  position: fixed;
+  font-size: 0;
+  left: 50%;
+  letter-spacing: -0.5px;
+  top: 50%;
+  padding: 34px 78px 48px 82px;
+  margin: -170px 0 0 -315px;
+  height: 330px;
+  width: 459px;
 }
 
-.order{
-	position: relative;
+.order-form-name {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
 }
-.order-form-name{
-	display: inline-block;
-    vertical-align: top;
-    width: 220px;
-}
+
 fieldset {
- 	border: none;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
 }
 
-.order-name{
-	display: block;
-    line-height: 18px;
-    margin: 20px 0 10px;
+.order-name {
+  display: block;
+  line-height: 18px;
+  margin: 20px 0 9px;
 }
+
 label {
-    cursor: default;
+  cursor: default;
 }
+
 .order-field {
-	border-radius: 4px;
-    border: 2px solid #d7dcde;
-    font-size: 12px;
-    padding: 0px 10px;
-    text-transform: uppercase;
-    width: 190px;
-    height: 34px;
-}
-.order-text{
-	margin: 8px 0; 
-	display: inline-block; 
-
+  border-radius: 4px;
+  border: 2px solid #d7dcde;
+  font-size: 11px;
+  padding: 0px 10px;
+  text-transform: uppercase;
+  width: 194px;
+  height: 34px;
 }
 
-.form-email{
-	margin-left: 25px;
+.order-text {
+  margin: 19px 0 10px;
+  display: inline-block;
 }
 
+.form-email {
+  margin-left: 19px;
+}
 
 textarea.order-field {
-	resize: none;
-    padding: 14px;
-    height: 90px;
-    width: 428px;
+  font-family: "Roboto", Verdana, sans-serif;
+  resize: none;
+  padding: 11px;
+  height: 88px;
+  width: 432px;
 }
+
 .form-button .btn {
-width: 460px;
-background-color: #fb565a;
-margin-top: 40px;
-border:none;
-font-size: 12px;
- text-align: center;
- color: #ffffff;
- text-transform: uppercase;
- line-height: 18px;	
- padding-top:10px;
- padding-bottom: 10px; 
+  width: 458px;
+  background-color: #fb565a;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 45px;
+  border: none;
+  font-size: 12px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .cross {
-	position: absolute;
-	top: 5px;
-	right: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 
 }
 
-
-
-/* P.S: помним что для каждого свойства display:inline-block  
+/* P.S: помним что для каждого свойства display:inline-block
 есть обязательное замечательно свойство vertical-align: top;
