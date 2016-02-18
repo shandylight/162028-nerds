@@ -1,4 +1,4 @@
-/*Общие стили */
+﻿Общие стили */
 body {
   font-family: "Roboto", Verdana, sans-serif;
   margin: 0;
@@ -21,8 +21,8 @@ body {
 .main-header {
   background-color: #eee;
   margin: 0 auto;
-  width: 100%;
   padding-top: 27px;
+  width: 100%;
 }
 
 .container {
@@ -40,8 +40,11 @@ body {
 .main-navigation {
   display: inline-block;
   float: right;
+  letter-spacing: 0.4px;
   margin-top: 31px;
-  margin-right: 27px;
+  margin-right: 7px;
+  margin-left: 0;
+  padding: 0;
   vertical-align: top;
 }
 
@@ -67,6 +70,7 @@ body {
 
 .main-navigation ul li {
   display: inline-block;
+  margin: 0px 19px;
   vertical-align: top;
 }
 
@@ -74,7 +78,6 @@ body {
   color: #000;
   display: inline-block;
   font-size: 14px;
-  margin-left: 33px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -99,7 +102,7 @@ body {
 }
 
 .place-symbol .icon-basket::before {
-  margin-right: 8px;
+  margin-right: 14px;
   font-size: 15px;
 }
 
@@ -117,17 +120,15 @@ body {
 }
 
 .slider {
-  position: relative;
-
-  width: 880px;
   margin: 0 auto;
+  position: relative;
+  width: 880px;
 }
 
 .slide {
-  min-height: 310px;
-
   background-repeat: no-repeat;
   background-position: 100% 10px;
+  min-height: 310px;
 }
 
 .slider input[type="radio"] {
@@ -135,64 +136,60 @@ body {
 }
 
 .slider-controls {
-  position: absolute;
   bottom: 85px;
   left: 50%;
-
-  width: 200px;
   margin-left: -100px;
-
+  position: absolute;
   text-align: center;
+  width:  180px;
 }
 
 .slider-controls label {
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  margin: 0 3px;
-
-  vertical-align: top;
-
   background: #ffffff;
   border: 3px solid white;
   border-radius: 50%;
   cursor: pointer;
+  display: inline-block;
+  height: 4px;
+  margin: 0 3px;
+  vertical-align: top;
+  width: 4px;
 }
 
 .slide-text {
-  width: 500px;
   padding: 30px 0;
+  width: 500px;
 }
 
 .slide-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
-  letter-spacing: -1.9px;
+  letter-spacing: -0.2px;
 }
 
 .slide p {
-  font-weight: 500;
-  line-height: 23px;
-  letter-spacing: -.8px;
   color: #283136;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 0.1px;
+  
 }
 
 .slide .btn {
-  display: block;
-  width: 220px;
-  margin-top: 27px;
-  padding: 12px 10px;
-
-  font-weight: 300;
-  font-size: 12px;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-
   background: #fb565a;
   border-radius: 3px;
+  color: #ffffff;
+  display: block;
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 27px;
+  padding: 11px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 220px;
+  
 }
 
 .slide:nth-child(1) {
@@ -232,31 +229,32 @@ body {
 /* =========   ========= */
 
 .main-centre {
-  padding-top: 78px;
+  padding-top: 59px;
   padding-bottom: 68px;
 }
 
 .block-columns {
   margin-left: -40px;
   margin-right: -40px;
-  padding-bottom: 80px;
+  padding-bottom: 58px;
 }
 
 .fz-null {
   font-size: 0;
 }
 
-.bk {
+.block {
   display: inline-block;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 20px 40px;
   vertical-align: top;
   width: 240px;
 }
 
-.bk h2 {
-  margin-top: 22px;
-  letter-spacing: -2.2px;
+.block h2 {
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  margin-top: 24px;
+  
 }
 
 h2 {
@@ -268,7 +266,7 @@ h2 {
 .block-columns p {
   font-size: 15px;
   line-height: 22px;
-  letter-spacing: -.8px;
+  letter-spacing: 0.1px;
   margin-bottom: 26px;
 }
 
@@ -279,7 +277,7 @@ h2 {
   font-size: 12px;
   height: 38px;
   line-height: 38px;
-  padding: 0 38px;
+  padding: 0 39px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -334,21 +332,17 @@ h2 {
 }
 
 /* ====  Разметка блока c текстом ==== */
-/*
-1. Блоки description-first и description-second можете сделать 
-через инлайн-блок или флоаты, 
-но в любом случае померить ширину в фотошопе и задать ее
-2. 
-*/
+
 
 .description {
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
   color: #181818;
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
-  padding: 68px 0 45px 0;
-  border-top: 2px solid #eee;
-  border-bottom: 2px solid #eee;
+  padding: 69px 0 49px 0;
+  
 }
 
 .description-first {
@@ -359,22 +353,23 @@ h2 {
 .description-slogan {
   font-size: 36px;
   font-weight: 500;
-  line-height: 36px;
-  padding-bottom: 5px;
-  letter-spacing: -4px;
+  line-height: 35px;
+  letter-spacing: -0.2px;
+  padding-bottom: 3px;
+  
 }
 
 .description-first p {
-  letter-spacing: -.7px;
+  letter-spacing: 0.1px;
+  font-weight: 400;
 }
 
 .title-orders {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 22px;
   margin: 44px 0 0 0;
   text-transform: uppercase;
-  letter-spacing: -.8px;
 }
 
 .text-orders {
@@ -383,17 +378,19 @@ h2 {
 }
 
 .text-orders li {
-  padding: 0 0 23px 35px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
   position: relative;
+  padding: 0 0 22px 36px;
 }
 
 .text-orders li:before {
   border: 1px solid #fb565a;
   content: '';
-  left: 0;
-  top: 12px;
+  left: -1px;
   position: absolute;
-  width: 25px;
+  top: 12px;
+  width: 23px;
 }
 
 .description-second {
@@ -402,25 +399,28 @@ h2 {
 }
 
 .description-logo {
-  text-align: center;
   margin-top: -8px;
   margin-left: 10px;
+  text-align: center;
+  
 }
 
 .description-year {
+  letter-spacing: 0;
+  font-weight: 400;
   margin-top: 19px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: -1.3px;
+ 
 }
 
 .description-year:before {
-  left: -10px;
+  left: -14px;
 }
 
 .description-year:after {
-  right: 10px;
+  right: -4px;
 }
 
 .description-year:before, .description-year:after {
@@ -430,7 +430,7 @@ h2 {
   margin: 0 0 0 12px;
   position: absolute;
   top: 10px;
-  width: 55px;
+  width: 65px;
 }
 
 .title-profits {
@@ -448,29 +448,37 @@ h2 {
 }
 
 .text-profits li {
+  letter-spacing: 0.1px;
   font-size: 16px;
   padding: 0 0 22px 35px;
   position: relative;
-  letter-spacing: -1px;
+  
 }
 
 .text-profits li:before {
   border: 1px solid #fb565a;
   content: '';
-  left: 0;
+  left: -1px;
   position: absolute;
   top: 12px;
-  width: 25px;
+  width: 23px;
 }
+/* ====  Разметка блока c логотипами ==== */
 
 .portfolio {
   border-bottom: 2px solid #eee;
-  margin: 0;
-  padding: 29px 6px 18px;
+  margin: 0 0 9px 0;
+  padding: 31px 6px 18px;
 }
 
-.portfolio-items li {
+.portfolio-list {
+  font-size: 0;
+  margin: 0 -50px;
+}   
+ 
+.portfolio-list li {
   display: inline-block;
+  margin: 0 50px;
   text-align: center;
   vertical-align: middle;
   width: 209px;
@@ -488,28 +496,7 @@ h2 {
   opacity: 1;
 }
 
-/* ====  Разметка блока c логотипами ==== */
-/*
-1. для  элементов li в portfolio-items задать
- display: inline-block, одинаковую ширину,и 
- margin по бокам
-2. задать нижний border и margin-bottom для блока portfolio
 
-3. для элементов логотипов похожие стили, как мы делали для блоков услуг, 
-с отрицательным марджином по бокам
-
-.portfolio-items {
-	margin: 0 -20px;
-}
-.portfolio-items li {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	margin: 0 20px;
-	width: 260px;
-} 
-
-*/
 
 /* ====  Разметка блока карты  ==== */
 /*
@@ -522,7 +509,7 @@ h2 {
 */
 
 .map {
-  margin-top: 11px;
+  margin-top: 10px;
   background: #fff url("../img/map.jpg") no-repeat;
   background-size: contain;
   background-position: center;
@@ -546,9 +533,8 @@ h2 {
 
 .title-contact {
   font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -1.4px;
-  line-height: 30px;
+  font-weight: 700;
+  line-height: 31px;
   text-transform: uppercase;
 }
 
@@ -559,8 +545,9 @@ h2 {
 }
 
 .address-contact p {
+  font-weight: 400;
   margin-bottom: 20px;
-  letter-spacing: -.6px;
+  letter-spacing: 0.3px;
   margin-top: 12px;
 }
 
@@ -571,6 +558,8 @@ h2 {
 .phone-contact a {
   color: #000;
   text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .btn-contact {
@@ -581,12 +570,11 @@ h2 {
   font-weight: 300;
   line-height: 18px;
   margin-top: 30px;
-  padding: 10px 16px;
+  padding: 9px 55px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: top;
-  width: 176px;
 }
 
 .label-contact {
@@ -603,11 +591,10 @@ h2 {
 }
 
 .socialsite-buttons a {
-  background: #e1e1e1;
   border-radius: 50%;
   display: inline-block;
   height: 50px;
-  margin: 5px 0;
+  margin: 4px 1px;
   padding: 5px;
   text-align: center;
   width: 50px;
@@ -644,21 +631,20 @@ h2 {
 
 .footer-text {
   float: right;
-  width: 555px;
+  width: 560px;
 }
 
 .text-discount {
   font-size: 34px;
-  font-weight: 300;
-  line-height: 36px;
-  margin: 0 0 11px 0;
-  letter-spacing: -2.9px;
+  font-weight: 700;
+  line-height: 35px;
+  margin: 0px 0 11px 0;
+  letter-spacing: 0.9px;
 }
 
 .sold {
   font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -1px;
+  font-weight: 400;
 }
 
 /* Страница Каталога */
@@ -671,15 +657,18 @@ h2 {
 .invitation {
   background: #eee;
   font-size: 40px;
-  font-weight: 200;
+  line-height: 47px;
+  margin: 0 auto;
   text-transform: uppercase;
   text-align: center;
   padding: 0 0 84px 0;
-  letter-spacing: -1px;
+  letter-spacing: 0.2px;
+  width: 700px;
 }
 
 .sidebar-choice {
   float: left;
+      margin-top: 20px;
   width: 240px;
 }
 
@@ -753,7 +742,7 @@ h2 {
   color: #283136;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
-  margin-left: 2px;
+  margin-left: 5px;
   outline: none;
   text-align: center;
   padding: 9px 10px;
@@ -774,18 +763,18 @@ h2 {
 
 .sidebar-choice legend {
   font-size: 17px;
-  font-weight: 500;
-  margin-left: -5px;
+  font-weight: 400;
+  margin-left: 0px;
   text-transform: uppercase;
 }
 
-/* =====  ОБРАТИТЬ ВНИМАНИЕ: блок фильтров в сайдбаре =====  */
+/* =====  блок фильтров в сайдбаре =====  */
 
 .price-filter,
 .filter-layout,
 .filter-features {
   border: none;
-  margin: 0 0 29px;
+  margin: 0 0 31px;
   padding: 0;
 }
 
@@ -801,25 +790,24 @@ h2 {
 
 .filter-layout legend,
 .filter-features legend {
-  font-weight: 500;
-  font-size: 17px;
-  margin: 0 -4px 20px;
-  letter-spacing: -0.5px;
-  text-transform: uppercase;
+     font-weight: 600;
+    font-size: 17px;
+    margin: 0 0px 20px;
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
 
 .filter-btn {
-  background: #f1f1f1;
-  border-radius: 3px;
-  border: 0;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 12px;
-  padding: 13px 0 11px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 40px;
-  width: 155px;
+     background: #f1f1f1;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    padding: 13px 47px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 35px;
 }
 
 /* радио и чекбоксы из иконочного шрифта */
@@ -829,12 +817,14 @@ input[type="checkbox"] {
   display: none;
 }
 
-/*Я здесь не поняла задумку дизайнера, просмотрите, пожалуйста!!!!*/
+
 
 input[type="radio"] + label {
   cursor: pointer;
   display: block;
+  font-weight: 400;
   line-height: 20px;
+  letter-spacing: 0.6px;
   font-size: 15px;
   vertical-align: top;
 }
@@ -845,7 +835,7 @@ input[type="radio"] + label:before {
   display: inline-block;
   font-family: "symbols-nerds";
   font-size: 28px;
-  margin-right: 10px;
+  margin-right: 13px;
   vertical-align: top;
 }
 
@@ -880,6 +870,7 @@ input[type="checkbox"] + label {
   cursor: pointer;
   display: block;
   font-size: 15px;
+      font-weight: 400;
   line-height: 20px;
   vertical-align: top;
 }
@@ -890,7 +881,7 @@ input[type="checkbox"] + label:before {
   display: inline-block;
   font-family: "symbols-nerds";
   font-size: 27px;
-  margin-right: 13px;
+  margin-right: 15px;
   vertical-align: top;
 }
 
@@ -911,41 +902,42 @@ input[type="checkbox"]:checked + label:before {
   content: "\2611";
   display: inline-block;
   font-family: "symbols-nerds";
-  font-size: 27px;
-  margin-right: 9px;
+  font-size: 27px; 
+  margin-right: 11px;
   vertical-align: top;
 }
 
 /*+++++++++++++++++++++++++++++++++*/
 
-/* =====  ОБРАТИТЬ ВНИМАНИЕ: блок проектов =====  */
+/* =====   блок проектов =====  */
 
 .projects {
   float: right;
+      margin-top: 20px;
   width: 563px;
 }
 
 /* сортировка верхняя start */
 
 .nav-projects {
-  font-size: 12px;
+  font-size: 0;
   font-weight: 500;
   min-height: 40px;
   text-transform: uppercase;
 }
 
 .title-projects {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 12px;
-  margin: 1px 12px 0 0;
-  padding: 0;
-  vertical-align: top;
+ display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0px 20px 0 0;
+    padding: 0;
+    vertical-align: top;
 }
 
 .filter-list {
   display: inline-block;
-  margin-right: 84px;
+  margin-right: 83px;
   margin-top: 1px;
   padding: 0;
   vertical-align: top;
@@ -954,8 +946,8 @@ input[type="checkbox"]:checked + label:before {
 .filter-list-item {
   display: inline-block;
   margin: 0 20px 0;
-  letter-spacing: -0.5px;;
-  vertical-align: top;
+  letter-spacing: 0;
+  vertical-align: top;  
 }
 
 .filter-list-item a {
@@ -977,6 +969,9 @@ input[type="checkbox"]:checked + label:before {
 
 .filter-direction {
   display: inline-block;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
   vertical-align: top;
 }
 
@@ -990,21 +985,20 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .filter-direction .icon-up-dir::before {
-  margin: -3px 0;
-  width: auto;
+    margin:  0;
+    width: 10px;
 }
 
-/*.filter-direction .icon-up-dir {*/
-  /*margin: -3px 0;*/
-/*}*/
 
 .filter-direction .icon-up-dir {
   color: #00ca74;
+  margin-top: -2px;
   text-align: left;
+  padding: 0 0 0 5px;
 }
 
 .filter-direction .icon-down-dir {
-  color: gray;
+  color: d2d2d2;
   text-align: left;
 }
 
@@ -1023,9 +1017,7 @@ input[type="checkbox"]:checked + label:before {
 /* список проектов */
 
 .list-images {
-  /*	display: inline-block;
-    margin: 0px -40px ;
-    vertical-align: top;*/
+  
   font-size: 0;
 }
 
@@ -1119,7 +1111,7 @@ input[type="checkbox"]:checked + label:before {
   font-size: 12px;
   height: 38px;
   line-height: 38px;
-  margin: 2px 4px 0;
+      margin: 2px 5px;
   min-width: 38px;
   text-align: center;
   text-decoration: none;
@@ -1128,11 +1120,11 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .catalog-pagination a.active {
-  background: #fff;
-  border: 2px solid #f2f2f2;
-  height: 34px;
-  line-height: 34px;
-  min-width: 34px;
+    background: #fff;
+    border: 2px solid #f2f2f2;
+    height: 34px;
+    line-height: 34px;
+    min-width: 33px;
 }
 
 .catalog-pagination a:active {
@@ -1144,8 +1136,8 @@ input[type="checkbox"]:checked + label:before {
   height: 38px;
   line-height: 38px;
   min-width: 38px;
-  margin-left: 8px;
-  padding: 0 29px;
+ margin-left: 6px;
+    padding: 0px 31px;
   text-align: center;
   text-decoration: none;
   vertical-align: top;
@@ -1159,7 +1151,7 @@ input[type="checkbox"]:checked + label:before {
 /*стили формы заказа*/
 
 .order-form-show {
-  display: block;
+  display: none;
   position: relative;
 }
 
@@ -1249,6 +1241,44 @@ textarea.order-field {
   right: 5px;
 
 }
+/*  Стили из файла symbols-nerds*/
 
-/* P.S: помним что для каждого свойства display:inline-block
-есть обязательное замечательно свойство vertical-align: top;
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-nerds";
+  src: url("../fonts/symbols-nerds.woff") format("woff"),
+       url("../fonts/symbols-nerds.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-nerds";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-basket::before { content: "\62"; } /* "b" */
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-vk::before { content: "\76"; } /* "v" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-circle::before { content: "\25cb"; } /* "○" */
+.icon-circle-dot::before { content: "\25cf"; } /* "●" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-instagramm::before { content: "📷"; } /* "\1f4f7" 
