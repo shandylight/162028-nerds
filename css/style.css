@@ -1,4 +1,45 @@
-﻿Общие стили */
+﻿/* Иконочные шрифты */
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-nerds";
+  src: url("../fonts/symbols-nerds.woff") format("woff"),
+       url("../fonts/symbols-nerds.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-nerds";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-basket::before { content: "\62"; } /* "b" */
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-vk::before { content: "\76"; } /* "v" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-circle::before { content: "\25cb"; } /* "○" */
+.icon-circle-dot::before { content: "\25cf"; } /* "●" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
+
+/*Общие стили */
 body {
   font-family: "Roboto", Verdana, sans-serif;
   margin: 0;
@@ -80,6 +121,7 @@ body {
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
+  vertical-align: top;
 }
 
 .place-symbol {
@@ -484,50 +526,30 @@ h2 {
   width: 209px;
 }
 
-.portfolio-items li + li {
-  margin-left: 109px;
-}
-
-.portfolio-items a {
+.portfolio-list a {
   opacity: 0.2;
 }
 
-.portfolio-items a:hover {
+.portfolio-list a:hover {
   opacity: 1;
 }
 
-
-
-/* ====  Разметка блока карты  ==== */
-/*
-1. для wrapper-map задаете свойство position: relative; 
-- что дает понять браузеру от 
-какого элемента отсчитывать координаты для блока у которого
- будет position: absolute;
-2. wrapper-contact задаем свойство position: absolute; и 
-отступы сверху (top:) и слева(left)
-*/
-
 .map {
-  margin-top: 10px;
-  background: #fff url("../img/map.jpg") no-repeat;
-  background-size: contain;
-  background-position: center;
+  height: 415px;
 }
 
 .wrapper-map {
-  height: 415px;
   position: relative;
   width: 100%;
 }
 
 .wrapper-contact {
   background: #fff;
+  bottom: 90px;
   color: #666;
   left: 1px;
   padding: 24px 20px;
   position: absolute;
-  top: 87px;
   width: 210px;
 }
 
@@ -555,15 +577,16 @@ h2 {
   letter-spacing: -1px;
 }
 
-.phone-contact a {
+.phone-contact span {
   color: #000;
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
 
-.btn-contact {
+.btn-contacts {
   border-radius: 3px;
+  border: none;
   color: #fff;
   display: inline-block;
   font-size: 12px;
@@ -597,6 +620,7 @@ h2 {
   margin: 4px 1px;
   padding: 5px;
   text-align: center;
+  vertical-align: top;
   width: 50px;
 }
 
@@ -614,12 +638,17 @@ h2 {
   padding-bottom: 75px;
 }
 
-.icon-vk, .icon-facebook, .icon-instagramm {
+.icon-vk, 
+.icon-facebook, 
+.icon-instagramm {
   font-size: 26px;
   color: #fff;
   line-height: 50px;
 }
-
+.socialsite-buttons a {
+  background: #e1e1e1;
+}
+    
 .socialsite-buttons a:hover {
   background: #fb565a;
 }
@@ -657,18 +686,18 @@ h2 {
 .invitation {
   background: #eee;
   font-size: 40px;
+  letter-spacing: 0.2px;
   line-height: 47px;
   margin: 0 auto;
+  padding: 0 0 84px 0;
   text-transform: uppercase;
   text-align: center;
-  padding: 0 0 84px 0;
-  letter-spacing: 0.2px;
   width: 700px;
 }
 
 .sidebar-choice {
   float: left;
-      margin-top: 20px;
+  margin-top: 20px;
   width: 240px;
 }
 
@@ -790,24 +819,36 @@ h2 {
 
 .filter-layout legend,
 .filter-features legend {
-     font-weight: 600;
-    font-size: 17px;
-    margin: 0 0px 20px;
-    letter-spacing: 0;
-    text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+  margin: 0 0px 20px;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .filter-btn {
-     background: #f1f1f1;
-    border-radius: 3px;
-    border: 0;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 12px;
-    padding: 13px 47px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 35px;
+  background: #f1f1f1;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 41px;
+  outline: none;
+  padding: 13px 47px;
+  text-transform: uppercase;
+  text-align: center; 
+  vertical-align: top;
+}
+
+.filter-btn:hover {
+  background: #e5e5e5;
+}
+
+.filter-btn:active {
+  background: #d5d5d5;
+  box-shadow: inset 0px 3px #cacaca;
+  outline: none;
 }
 
 /* радио и чекбоксы из иконочного шрифта */
@@ -817,14 +858,11 @@ input[type="checkbox"] {
   display: none;
 }
 
-
-
 input[type="radio"] + label {
   cursor: pointer;
   display: block;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0.6px;
   font-size: 15px;
   vertical-align: top;
 }
@@ -842,7 +880,6 @@ input[type="radio"] + label:before {
 input[type="radio"]:checked + label:before {
   color: #c1c1c1;
   content: "\25cf";
-
 }
 
 input[type="radio"]:disabled + label:before {
@@ -851,14 +888,12 @@ input[type="radio"]:disabled + label:before {
 }
 
 input[type="radio"] + label:hover:before {
-  color: #000;
-  /*color: #bcbcbc;*/
+  color: #bcbcbc;
 }
 
 input[type="radio"]:checked + label:hover:before {
-  /*color: #bcbcbc;*/
+  color: #bcbcbc;
   content: "\25cf";
-  color: #000;
 }
 
 input[type="radio"]:disabled + label:hover:before {
@@ -870,7 +905,7 @@ input[type="checkbox"] + label {
   cursor: pointer;
   display: block;
   font-size: 15px;
-      font-weight: 400;
+  font-weight: 400;
   line-height: 20px;
   vertical-align: top;
 }
@@ -907,17 +942,15 @@ input[type="checkbox"]:checked + label:before {
   vertical-align: top;
 }
 
-/*+++++++++++++++++++++++++++++++++*/
-
 /* =====   блок проектов =====  */
 
 .projects {
   float: right;
-      margin-top: 20px;
+  margin-top: 20px;
   width: 563px;
 }
 
-/* сортировка верхняя start */
+/* сортировка верхняя */
 
 .nav-projects {
   font-size: 0;
@@ -927,12 +960,12 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .title-projects {
- display: inline-block;
-    font-weight: 500;
-    font-size: 12px;
-    margin: 0px 20px 0 0;
-    padding: 0;
-    vertical-align: top;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0px 20px 0 0;
+  padding: 0;
+  vertical-align: top;
 }
 
 .filter-list {
@@ -985,10 +1018,9 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .filter-direction .icon-up-dir::before {
-    margin:  0;
-    width: 10px;
+  margin:  0;
+  width: 10px;
 }
-
 
 .filter-direction .icon-up-dir {
   color: #00ca74;
@@ -998,26 +1030,28 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .filter-direction .icon-down-dir {
-  color: d2d2d2;
+  color: #d2d2d2;
   text-align: left;
 }
 
 .icon-down-dir:hover,
-.icon-down-dir {
+.icon-down-dir:hover {
   color: #00ca74;
 }
 
-.filter-direction .icon-down-dir::before {
-  width: auto;
-  margin: -3px 0;
+.icon-down-dir:active,
+.icon-down-dir:active {
+  color: #000;
 }
 
-/* сортировка верхняя end */
-
+.filter-direction .icon-down-dir::before {
+  margin: -3px;
+  width: auto;
+}
+ 
 /* список проектов */
 
 .list-images {
-  
   font-size: 0;
 }
 
@@ -1080,6 +1114,7 @@ input[type="checkbox"]:checked + label:before {
 
 .about-site-describe {
   font-size: 14px;
+  line-height: 19px;
   margin-bottom: 30px;
 }
 
@@ -1091,7 +1126,6 @@ input[type="checkbox"]:checked + label:before {
   margin: 0 auto;
   text-align: center;
   text-decoration: none;
-  letter-spacing: -1px;
   padding: 9px 0;
   vertical-align: top;
   width: 140px;
@@ -1111,7 +1145,7 @@ input[type="checkbox"]:checked + label:before {
   font-size: 12px;
   height: 38px;
   line-height: 38px;
-      margin: 2px 5px;
+  margin: 2px 5px;
   min-width: 38px;
   text-align: center;
   text-decoration: none;
@@ -1120,11 +1154,11 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .catalog-pagination a.active {
-    background: #fff;
-    border: 2px solid #f2f2f2;
-    height: 34px;
-    line-height: 34px;
-    min-width: 33px;
+  background: #fff;
+  border: 2px solid #f2f2f2;
+  height: 34px;
+  line-height: 34px;
+  min-width: 33px;
 }
 
 .catalog-pagination a:active {
@@ -1136,149 +1170,148 @@ input[type="checkbox"]:checked + label:before {
   height: 38px;
   line-height: 38px;
   min-width: 38px;
- margin-left: 6px;
-    padding: 0px 31px;
+  margin-left: 6px;
+  padding: 0px 31px;
   text-align: center;
   text-decoration: none;
   vertical-align: top;
 }
 
 .catalog-pagination a:hover {
-
   background-color: #e5e5e5;
 }
 
-/*стили формы заказа*/
+/*стили формы  */
 
-.order-form-show {
+.order-form {
+  background: #ffffff;
+  top: 1590px;
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+  color: #000000;
   display: none;
-  position: relative;
+  left: 50%;
+  margin-left: -325px;
+  padding: 42px 80px;
+  position: absolute;
+  width: 470px;
 }
 
 .order-form {
-  background: #fff;
-  box-shadow: 0 0 10px #000;
-  position: fixed;
-  font-size: 0;
-  left: 50%;
-  letter-spacing: -0.5px;
-  top: 50%;
-  padding: 34px 78px 48px 82px;
-  margin: -170px 0 0 -315px;
-  height: 330px;
-  width: 459px;
+  top: 276px;
 }
 
-.order-form-name {
-  display: inline-block;
-  vertical-align: top;
-  width: 220px;
-}
-
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-}
-
-.order-name {
+.order-show {
   display: block;
-  line-height: 18px;
-  margin: 20px 0 9px;
 }
 
-label {
-  cursor: default;
-}
-
-.order-field {
-  border-radius: 4px;
-  border: 2px solid #d7dcde;
-  font-size: 11px;
-  padding: 0px 10px;
-  text-transform: uppercase;
-  width: 194px;
-  height: 34px;
-}
-
-.order-text {
-  margin: 19px 0 10px;
-  display: inline-block;
-}
-
-.form-email {
-  margin-left: 19px;
-}
-
-textarea.order-field {
-  font-family: "Roboto", Verdana, sans-serif;
-  resize: none;
-  padding: 11px;
-  height: 88px;
-  width: 432px;
-}
-
-.form-button .btn {
-  width: 458px;
-  background-color: #fb565a;
-  border-radius: 4px;
+.order-close {
+  background:url("../img/cross.png") no-repeat;
+  border: 0;
+  border-radius: 50%;
   cursor: pointer;
-  margin-top: 45px;
-  border: none;
+  height: 41px;
+  outline: 0;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 41px;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  background-color: #ffffff;
+  border-radius: 1px;
+  content: "";
+  height: 4px;
+  position: absolute;
+  right: 9px;
+  top: 18px;
+  width: 24px;
+}
+
+.order-close::before {
+  transform: rotate(45deg);
+}
+
+.order-close::after {
+  transform: rotate(-45deg);
+}
+
+.comment-form input[type="text"] {
+  background: #ffffff;
+  border: 2px solid #d7dcde;
+  color: #000000;
+  display: inline-block;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 12px;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
   line-height: 18px;
-  padding-top: 10px;
+  margin: 0;
+  margin-bottom: 22px;
+  outline: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  width: 188px;
+}
+
+.comment-form input:hover,
+.comment-form textarea:hover {
+  border-color: #a2a9ac;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #56bffb;
+}
+
+.comment-form label {
+  display: block;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
   padding-bottom: 10px;
 }
 
-.cross {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-
+.comment-form .username-content {
+  float: left;
+  margin-right: 20px;
+  padding-top: 12px;
 }
-/*  Стили из файла symbols-nerds*/
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-
-  font-family: "symbols-nerds";
-  src: url("../fonts/symbols-nerds.woff") format("woff"),
-       url("../fonts/symbols-nerds.woff2") format("woff2");
+.comment-form .email-content {
+  float: left;
+  padding-top: 12px;
 }
 
-[class^="icon-"]::before,
-[class*=" icon-"]::before {
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
+.comment-form textarea {
+  background: #ffffff;
+  border: 2px solid #d7dcde;
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  margin-bottom: 45px;
+  outline: none;
+  padding: 7px 14px;
+  padding-bottom: 12px;
+  resize: none;
+  text-transform: uppercase;
+  width: 428px;
+}
 
-  font-weight: normal;
-  line-height: 1em;
-  font-family: "symbols-nerds";
+.btn-order-form {
+  border: none;
+  outline: none;
+  padding: 10px 195px;
+  margin-bottom: 5px;
+  background-color: #fb565a;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 18px;
   text-align: center;
-  text-transform: none;
-  text-decoration: inherit;
-  font-style: normal;
-  font-variant: normal;
-
-  speak: none;
+  text-transform: uppercase;
+  width: 100%;
 }
 
-.icon-basket::before { content: "\62"; } /* "b" */
-.icon-facebook::before { content: "\66"; } /* "f" */
-.icon-twitter::before { content: "\74"; } /* "t" */
-.icon-vk::before { content: "\76"; } /* "v" */
-.icon-up-dir::before { content: "\25b2"; } /* "▲" */
-.icon-down-dir::before { content: "\25bc"; } /* "▼" */
-.icon-circle::before { content: "\25cb"; } /* "○" */
-.icon-circle-dot::before { content: "\25cf"; } /* "●" */
-.icon-check-off::before { content: "\2610"; } /* "☐" */
-.icon-check-on::before { content: "\2611"; } /* "☑" */
-.icon-instagramm::before { content: "📷"; } /* "\1f4f7" 
