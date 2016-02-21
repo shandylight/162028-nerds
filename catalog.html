@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="utf-8">  
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
   <title>Нёрдс - Каталог</title>
 </head>
 <body>
@@ -11,29 +12,31 @@
   <header class="main-header"> 
   	<div class="container clearfix">
       <div class="logo-img">
-      		<img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
+      		<a href="index.html">
+            <img src="img/index-logo.png" width="140" height="58" alt="Логотип Нердс">
+          </a>
       </div>
       <div class="place-symbol">
             <a class="symbol-bin icon-basket" href="#">Корзина</a>
       </div>   		
   			<nav class="main-navigation"> 
      		  <ul class="no-list navigation-menu">
-          <li>
-           <a href="index.html" class="main-navigation-link">Студия</a>
-          </li>
-          <li>
-           <span class="main-navigation-link">Клиенты</span>
-          </li>
-          <li>
-            <a href="catalog.html" class="main-navigation-link active">Магазин</a>
-          </li>
-          <li>
-            <span class="main-navigation-link">Контакты</span>
-          </li> 
-        </ul>
-  		</nav>
-    </div>
-  </header>
+            <li class="main-navigation-item">
+             <a href="index.html" class="main-navigation-link">Студия</a>
+            </li>
+            <li class="main-navigation-item">
+             <a href="" class="main-navigation-link">Клиенты</span>
+            </li>
+            <li class="main-navigation-item">
+              <span class="main-navigation-link active">Магазин</span>
+            </li>
+            <li class="main-navigation-item">
+              <a href="" class="main-navigation-link">Контакты</a>
+            </li> 
+          </ul>
+    		</nav>
+      </div>
+    </header>
   <!-- header end -->
 
   <div class="catalog-welcome">
@@ -49,7 +52,8 @@
 
         <div class="sidebar-choice">
           <form action="form.php" method="GET">
-            <legend>Стоимость:</legend>
+
+            <span>Стоимость:</span>
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
@@ -75,15 +79,15 @@
             </fieldset>
             <fieldset class="filter-features">
               <legend>Особенности:</legend>
-              <input type="checkbox" id="slider-box" class="filter-field" checked>
+              <input type="checkbox" id="slider-box" class="filter-field" name="slider" checked>
               <label for="slider-box">Слайдер</label> 
-              <input type="checkbox" id="profit-box" class="filter-field">
+              <input type="checkbox" id="profit-box" class="filter-field" name="block-features">
               <label for="profit-box">Блок преимуществ</label>
-              <input type="checkbox" id="news-box" class="filter-field" checked>
+              <input type="checkbox" id="news-box" class="filter-field" name="news" checked>
               <label for="news-box">Новости</label> 
-              <input type="checkbox" id="gallery-box" class="filter-field">
+              <input type="checkbox" id="gallery-box" class="filter-field" name="gallery">
               <label for="gallery-box">Галерея</label>
-              <input type="checkbox" id="bin-box" class="filter-field"> 
+              <input type="checkbox" id="bin-box" class="filter-field" name="basket"> 
               <label for="bin-box">Корзина</label>
               <button type="button" class="filter-btn">Показать</button>
             </fieldset>
@@ -203,7 +207,7 @@
   </main>
 
   <div class="map">
-    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=pm2ap9O5rsIOfdWvtkRUFrQclpccE8mV&width=100%&height=415&lang=ru_RU&sourceType=constructor"></script>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=pm2ap9O5rsIOfdWvtkRUFrQclpccE8mV&width=100%25&height=415&lang=ru_RU&sourceType=constructor"></script>
 
     <div class="container">
       <div class="wrapper-map">  

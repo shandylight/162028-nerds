@@ -39,6 +39,10 @@
 .icon-check-on::before { content: "\2611"; } /* "☑" */
 .icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
 
+
+
+
+
 /*Общие стили */
 body {
   font-family: "Roboto", Verdana, sans-serif;
@@ -109,7 +113,7 @@ body {
   vertical-align: top;
 }
 
-.main-navigation ul li {
+.main-navigation-item {
   display: inline-block;
   margin: 0px 19px;
   vertical-align: top;
@@ -790,7 +794,7 @@ h2 {
   left: 159px;
 }
 
-.sidebar-choice legend {
+.sidebar-choice span {
   font-size: 17px;
   font-weight: 400;
   margin-left: 0px;
