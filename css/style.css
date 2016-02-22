@@ -37,23 +37,6 @@
 .icon-check-on::before { content: "\2611"; } /* "☑" */
 .icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
 
-/* Шрифт */
-
-
-@font-face {
-	font-family:'../fonts/Roboto-Regular';
-	src: url('../fonts/Roboto-Regular_gdi.eot');
-	src: url('../fonts/Roboto-Regular_gdi.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Roboto-Regular_gdi.woff') format('woff'),
-		url('../fonts/Roboto-Regular_gdi.ttf') format('truetype'),
-		url('../fonts/Roboto-Regular_gdi.svg#Roboto-Regular') format('svg');
-	font-weight: 400;
-	font-style: normal;
-	font-stretch: normal;
-}
-
-
-
 /*Общие стили */
 body {
 	font-family: "Roboto", Verdana, sans-serif;
@@ -1245,10 +1228,18 @@ input[type="checkbox"]:checked + label:before {
 }
 	  
 .order-close::before {
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 
 .order-close::after {
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
