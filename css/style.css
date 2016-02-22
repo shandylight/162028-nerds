@@ -1,4 +1,4 @@
-﻿/* Икон. шрифты */
+﻿/* Иконочный шрифт */
 @font-face {
 	font-weight: normal;
 	font-style: normal;
@@ -14,7 +14,6 @@
 	width: 1em;
 	margin-right: 0.2em;
 	margin-left: 0.2em;
-
 	font-weight: normal;
 	line-height: 1em;
 	font-family: "symbols-nerds";
@@ -23,7 +22,6 @@
 	text-decoration: inherit;
 	font-style: normal;
 	font-variant: normal;
-
 	speak: none;
 }
 
